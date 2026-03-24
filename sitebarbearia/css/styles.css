@@ -1,0 +1,977 @@
+/* ===================================
+   VARIÁVEIS E RESET
+   =================================== */
+
+:root {
+    --cor-primaria: #1a1a1a;
+    --cor-secundaria: #ffffff;
+    --cor-destaque: #d4af37;
+    --cor-verde: #2d5016;
+    --cor-hover: #2d2d2d;
+    --cor-texto: #333333;
+    --cor-texto-light: #666666;
+    --cor-bg-light: #f5f5f5;
+    --transicao: all 0.3s ease-in-out;
+    --sombra: 0 10px 30px rgba(0, 0, 0, 0.2);
+    --sombra-leve: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--cor-texto);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ===================================
+   CONTAINER E UTILITÁRIOS
+   =================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--cor-primaria);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--cor-destaque), var(--cor-verde));
+    margin: 1rem auto 0;
+}
+
+/* ===================================
+   BUTTONS
+   =================================== */
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--cor-destaque), #c9941f);
+    color: var(--cor-primaria);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transicao);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: var(--sombra-leve);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sombra);
+    background: linear-gradient(135deg, #c9941f, var(--cor-destaque));
+}
+
+.btn-primary:active {
+    transform: translateY(-1px);
+}
+
+.btn-agendar-header {
+    background: var(--cor-destaque);
+    color: var(--cor-primaria);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transicao);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+.btn-agendar-header:hover {
+    background: #c9941f;
+    transform: scale(1.05);
+}
+
+.btn-hero {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+.btn-agendar-form {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.05rem;
+    margin-top: 20px;
+}
+
+/* ===================================
+   HEADER
+   =================================== */
+
+.header {
+    background: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--sombra-leve);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--cor-destaque);
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--cor-destaque);
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transicao);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--cor-destaque);
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.nav-link:hover {
+    color: var(--cor-destaque);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* ===================================
+   HERO SECTION
+   =================================== */
+
+.hero {
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+.hero-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: var(--cor-secundaria);
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ===================================
+   SOBRE
+   =================================== */
+
+.sobre {
+    padding: 80px 0;
+    background: var(--cor-secundaria);
+}
+
+.sobre-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.sobre-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: var(--cor-primaria);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sobre-text p {
+    font-size: 1.05rem;
+    color: var(--cor-texto-light);
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.sobre-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+    transition: var(--transicao);
+}
+
+.sobre-image img:hover {
+    transform: scale(1.05);
+}
+
+/* ===================================
+   SERVIÇOS
+   =================================== */
+
+.servicos {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--cor-bg-light) 0%, #ffffff 100%);
+}
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.servico-card {
+    background: var(--cor-secundaria);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: var(--sombra-leve);
+    transition: var(--transicao);
+    cursor: pointer;
+    border-top: 4px solid transparent;
+}
+
+.servico-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--sombra);
+    border-top-color: var(--cor-destaque);
+}
+
+.servico-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    display: block;
+    animation: float 3s ease-in-out infinite;
+}
+
+.servico-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--cor-primaria);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.servico-descricao {
+    color: var(--cor-texto-light);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.servico-preco {
+    font-size: 1.8rem;
+    color: var(--cor-destaque);
+    font-weight: 700;
+}
+
+/* ===================================
+   GALERIA
+   =================================== */
+
+.galeria {
+    padding: 80px 0;
+    background: var(--cor-primaria);
+}
+
+.galeria .section-title {
+    color: var(--cor-secundaria);
+}
+
+.galeria .section-title::after {
+    background: linear-gradient(90deg, var(--cor-destaque), var(--cor-verde));
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.galeria-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 300px;
+    cursor: pointer;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transicao);
+}
+
+.galeria-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(212, 175, 55, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transicao);
+}
+
+.galeria-overlay p {
+    color: var(--cor-primaria);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.1);
+}
+
+.galeria-item:hover .galeria-overlay {
+    opacity: 1;
+}
+
+/* ===================================
+   AGENDAMENTO
+   =================================== */
+
+.agendamento {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f9f9f9 0%, var(--cor-bg-light) 100%);
+}
+
+.agendamento-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 50px;
+    align-items: start;
+}
+
+.agendamento-form {
+    background: var(--cor-secundaria);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: var(--sombra);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: var(--transicao);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--cor-destaque);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.form-group input::placeholder {
+    color: #999;
+}
+
+.horarios-display {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.horarios-display.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.horarios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 10px;
+}
+
+.horario-btn {
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    background: var(--cor-secundaria);
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    transition: var(--transicao);
+    font-size: 0.85rem;
+}
+
+.horario-btn:hover:not(:disabled) {
+    border-color: var(--cor-destaque);
+    color: var(--cor-destaque);
+    transform: scale(1.05);
+}
+
+.horario-btn.selected {
+    background: var(--cor-destaque);
+    color: var(--cor-primaria);
+    border-color: var(--cor-destaque);
+}
+
+.horario-btn:disabled {
+    background: #e0e0e0;
+    color: #999;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.agendamento-info {
+    background: var(--cor-secundaria);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: var(--sombra);
+}
+
+.agendamento-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--cor-primaria);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.agendamento-info ul {
+    list-style: none;
+}
+
+.agendamento-info li {
+    padding: 12px 0;
+    color: var(--cor-texto-light);
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 0.95rem;
+}
+
+.agendamento-info li:last-child {
+    border-bottom: none;
+}
+
+/* ===================================
+   CONTATO
+   =================================== */
+
+.contato {
+    padding: 80px 0;
+    background: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.contato .section-title {
+    color: var(--cor-secundaria);
+}
+
+.contato-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.contato-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    transition: var(--transicao);
+    border: 2px solid transparent;
+}
+
+.contato-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--cor-destaque);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.contato-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.contato-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contato-card p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.contato-link {
+    color: var(--cor-destaque);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: var(--transicao);
+    display: inline-block;
+}
+
+.contato-link:hover {
+    transform: scale(1.05);
+}
+
+/* ===================================
+   FOOTER
+   =================================== */
+
+.footer {
+    background: #0a0a0a;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 30px 0;
+    text-align: center;
+    border-top: 2px solid var(--cor-destaque);
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
+/* ===================================
+   ANIMAÇÕES
+   =================================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ===================================
+   RESPONSIVO - TABLET
+   =================================== */
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        height: 400px;
+        margin-top: 60px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .sobre-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .sobre-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .servicos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+    }
+
+    .servico-card {
+        padding: 20px;
+    }
+
+    .servico-icon {
+        font-size: 2.5rem;
+    }
+
+    .agendamento-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .agendamento-form,
+    .agendamento-info {
+        padding: 25px;
+    }
+
+    .horarios-grid {
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    }
+
+    .contato-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 25px;
+    }
+}
+
+/* ===================================
+   RESPONSIVO - MOBILE
+   =================================== */
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .header {
+        padding: 10px 0;
+    }
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo h1 {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+
+    .nav {
+        gap: 10px;
+    }
+
+    .nav-link {
+        font-size: 0.75rem;
+    }
+
+    .btn-agendar-header {
+        padding: 8px 15px;
+        font-size: 0.7rem;
+    }
+
+    .hero {
+        height: 300px;
+        margin-top: 50px;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .btn-hero {
+        padding: 10px 25px;
+        font-size: 0.85rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .sobre {
+        padding: 40px 0;
+    }
+
+    .sobre-text h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .sobre-text p {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+
+    .servicos {
+        padding: 40px 0;
+    }
+
+    .servicos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 15px;
+    }
+
+    .servico-card {
+        padding: 15px;
+    }
+
+    .servico-icon {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .servico-card h3 {
+        font-size: 1rem;
+    }
+
+    .servico-preco {
+        font-size: 1.3rem;
+    }
+
+    .galeria {
+        padding: 40px 0;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .galeria-item {
+        height: 200px;
+    }
+
+    .agendamento {
+        padding: 40px 0;
+    }
+
+    .agendamento-form,
+    .agendamento-info {
+        padding: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        font-size: 0.8rem;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .horarios-grid {
+        grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+        gap: 8px;
+    }
+
+    .horario-btn {
+        padding: 8px;
+        font-size: 0.75rem;
+    }
+
+    .btn-agendar-form {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+
+    .agendamento-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .agendamento-info li {
+        padding: 10px 0;
+        font-size: 0.85rem;
+    }
+
+    .contato {
+        padding: 40px 0;
+    }
+
+    .contato-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .contato-card {
+        padding: 25px;
+    }
+
+    .contato-icon {
+        font-size: 2.5rem;
+    }
+
+    .contato-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .contato-card p {
+        font-size: 0.85rem;
+    }
+
+    .footer {
+        padding: 20px 0;
+    }
+
+    .footer p {
+        font-size: 0.8rem;
+    }
+}
+
+/* ===================================
+   MICRO INTERAÇÕES
+   =================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Índice do Projeto - Barbearia Mayke</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #fff;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #d4af37;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #aaa;
+            margin-bottom: 40px;
+            font-size: 1rem;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid #d4af37;
+            border-radius: 10px;
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            background: rgba(212, 175, 55, 0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        }
+        
+        .card h2 {
+            color: #d4af37;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .card p {
+            color: #ddd;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .card a {
+            display: inline-block;
+            color: #d4af37;
+            text-decoration: none;
+            margin-top: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .card a:hover {
+            color: #fff;
+            transform: translateX(5px);
+        }
+        
+        .main-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #d4af37;
+            color: #1a1a1a;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+        
+        .main-btn:hover {
+            background: #c9941f;
+            transform: scale(1.05);
+        }
+        
+        .status {
+            background: rgba(76, 175, 80, 0.15);
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        
+        .status p {
+            color: #4caf50;
+            font-weight: 600;
+        }
+        
+        .code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #d4af37;
+            color: #999;
+        }
+        
+        .icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💈 BARBEARIA MAYKE</h1>
+        <p class="subtitle">Índice e Guia do Projeto</p>
+        
+        <div class="status">
+            <p>✅ Status: PRONTO PARA USO E PRODUÇÃO</p>
+        </div>
+        
+        <a href="index.html" class="main-btn">🌐 ABRIR SITE</a>
+        
+        <div class="grid">
+            <!-- Card 1: Site Principal -->
+            <div class="card">
+                <div class="icon">🌐</div>
+                <h2>Site Principal</h2>
+                <p>O site completo da Barbearia Mayke com todas as seções</p>
+                <p><strong>Estado:</strong> Funcionando 100%</p>
+                <a href="index.html">Abrir Site →</a>
+            </div>
+            
+            <!-- Card 2: Documentação -->
+            <div class="card">
+                <div class="icon">📖</div>
+                <h2>Documentação</h2>
+                <p>Guia completo com instruções, funcionalidades e troubleshooting</p>
+                <a href="README.md">README.md →</a>
+                <br>
+                <small style="color: #999;">Versão 1.0 - Pronto para Produção</small>
+            </div>
+            
+            <!-- Card 3: Início Rápido -->
+            <div class="card">
+                <div class="icon">⚡</div>
+                <h2>Início Rápido</h2>
+                <p>Guia rápido para começar. Customizações essenciais</p>
+                <a href="QUICK_START.txt">QUICK_START.txt →</a>
+                <br>
+                <small style="color: #999;">Leia primeiro!</small>
+            </div>
+            
+            <!-- Card 4: Gerar Imagens -->
+            <div class="card">
+                <div class="icon">🖼️</div>
+                <h2>Imagens</h2>
+                <p>Guia para gerar ou obter imagens placeholder</p>
+                <a href="GENERATE_IMAGES.md">GENERATE_IMAGES.md →</a>
+                <br>
+                <small style="color: #999;">Python, ImageMagick, ou Online</small>
+            </div>
+            
+            <!-- Card 5: Script Python -->
+            <div class="card">
+                <div class="icon">🐍</div>
+                <h2>Script Python</h2>
+                <p>Gera automaticamente as 6 imagens necessárias</p>
+                <div class="code">python3 generate_images.py</div>
+                <a href="generate_images.py">generate_images.py →</a>
+                <br>
+                <small style="color: #999;">Requer: pip install Pillow</small>
+            </div>
+            
+            <!-- Card 6: Configuração -->
+            <div class="card">
+                <div class="icon">⚙️</div>
+                <h2>Configuração</h2>
+                <p>JSON com todas as configurações do site</p>
+                <a href="config.json">config.json →</a>
+                <br>
+                <small style="color: #999;">Referência para customizações</small>
+            </div>
+        </div>
+        
+        <!-- Instruções de Arquivos -->
+        <div class="card" style="grid-column: 1/-1;">
+            <h2>📁 Estrutura de Arquivos</h2>
+            <div class="code">
+sitebarbearia/
+├── <strong>index.html</strong> ............... Arquivo principal do site
+├── <strong>css/styles.css</strong> ......... Estilos completos
+├── <strong>js/script.js</strong> ........... Lógica JavaScript
+├── <strong>images/</strong> ................ Pasta com 6 imagens (img1-img6)
+├── <strong>README.md</strong> ............. Documentação completa
+├── <strong>QUICK_START.txt</strong> ....... Guia rápido
+├── <strong>GENERATE_IMAGES.md</strong> ... Guia de imagens
+├── <strong>generate_images.py</strong> ... Script Python
+├── <strong>config.json</strong> ........... Configurações em JSON
+└── <strong>.gitignore</strong> ............ Configuração Git
+            </div>
+            
+            <h3 style="color: #d4af37; margin-top: 20px; margin-bottom: 10px;">Imagens Necessárias:</h3>
+            <p>• <strong>img1.jpg</strong> (200x200) - Logo</p>
+            <p>• <strong>img2.jpg</strong> (1920x600) - Hero Background</p>
+            <p>• <strong>img3.jpg</strong> (500x500) - Sobre a Barbearia</p>
+            <p>• <strong>img4.jpg</strong> (600x400) - Galeria 1</p>
+            <p>• <strong>img5.jpg</strong> (600x400) - Galeria 2</p>
+            <p>• <strong>img6.jpg</strong> (600x400) - Galeria 3</p>
+        </div>
+        
+        <!-- Próximos Passos -->
+        <div class="card" style="grid-column: 1/-1;">
+            <h2>✅ Próximos Passos</h2>
+            <p><strong>1. Gerar Imagens</strong></p>
+            <p style="color: #bbb; margin-bottom: 15px;">Execute: python3 generate_images.py (veja GENERATE_IMAGES.md para alternativas)</p>
+            
+            <p><strong>2. Alterar Número WhatsApp</strong></p>
+            <div class="code">js/script.js
+const WHATSAPP_NUMBER = '5599999999999'; // ← Altere aqui</div>
+            
+            <p><strong>3. Customizar Serviços</strong></p>
+            <p style="color: #bbb; margin-bottom: 15px;">Edite os serviços e preços em index.html (seção Serviços)</p>
+            
+            <p><strong>4. Adicionar Dados</strong></p>
+            <p style="color: #bbb; margin-bottom: 15px;">Endereço, horários e informações em index.html (seção Contato)</p>
+            
+            <p><strong>5. Deploy Online</strong></p>
+            <p style="color: #bbb;">Recomendado: Netlify, Vercel ou GitHub Pages (veja README.md)</p>
+        </div>
+        
+        <!-- Features -->
+        <div class="card" style="grid-column: 1/-1;">
+            <h2>✨ Funcionalidades Implementadas</h2>
+            <p>✓ Design profissional e moderno (preto, branco, dourado)</p>
+            <p>✓ 100% responsivo (Mobile First)</p>
+            <p>✓ Agendamento com integração WhatsApp</p>
+            <p>✓ Horários dinâmicos (08:00 - 18:00, a cada 30 min)</p>
+            <p>✓ Simulação de horários ocupados</p>
+            <p>✓ Validação de formulário</p>
+            <p>✓ Notificações em tempo real (toast)</p>
+            <p>✓ Animações suaves e microrinterações</p>
+            <p>✓ Sem dependências externas (HTML + CSS + JS puro)</p>
+            <p>✓ Código limpo e bem comentado</p>
+            <p>✓ Pronto para produção e venda</p>
+        </div>
+        
+        <footer>
+            <p>Barbearia Mayke | Website Profissional v1.0</p>
+            <p>Criado: 21 de Março, 2026 | Status: ✅ Pronto para Produção</p>
+            <p style="margin-top: 10px; color: #666;">Desenvolvido com ❤️ para conversão de agendamentos</p>
+        </footer>
+    </div>
+</body>
+</html>

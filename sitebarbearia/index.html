@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Mayke - Cortes Modernos e Atendimento de Qualidade</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/img1.jpg" alt="Logo Barbearia Mayke">
+                <h1>BARBEARIA MAYKE</h1>
+            </div>
+            <nav class="nav">
+                <a href="#inicio" class="nav-link">Início</a>
+                <a href="#servicos" class="nav-link">Serviços</a>
+                <a href="#agendamento" class="nav-link">Agendamento</a>
+                <a href="#contato" class="nav-link">Contato</a>
+            </nav>
+            <button class="btn-agendar-header">Agendar Agora</button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="inicio">
+        <div class="hero-overlay"></div>
+        <img src="images/img2.jpg" alt="Hero Background" class="hero-bg">
+        <div class="hero-content">
+            <h2 class="hero-title">Seu estilo começa aqui</h2>
+            <p class="hero-subtitle">Cortes modernos e atendimento de qualidade</p>
+            <button class="btn-primary btn-hero">Agendar Horário</button>
+        </div>
+    </section>
+
+    <!-- SOBRE A BARBEARIA -->
+    <section class="sobre" id="sobre">
+        <div class="container">
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <h2>Sobre a Barbearia Mayke</h2>
+                    <p>
+                        Com mais de 10 anos de experiência, a Barbearia Mayke é sinônimo de qualidade e profissionalismo. 
+                        Nossa equipe de barbeiros experientes está sempre atualizada com as últimas tendências em cortes e estilos.
+                    </p>
+                    <p>
+                        Oferecemos um ambiente acolhedor e moderno, onde cada cliente é tratado com respeito e atenção. 
+                        Utilizamos produtos de primeira qualidade e seguimos rigorosos padrões de higiene.
+                    </p>
+                    <p>
+                        Venha experimentar nosso atendimento e deixar seu estilo em nossas mãos!
+                    </p>
+                </div>
+                <div class="sobre-image">
+                    <img src="images/img3.jpg" alt="Sobre Barbearia Mayke">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="servicos" id="servicos">
+        <div class="container">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <div class="servicos-grid">
+                <div class="servico-card">
+                    <div class="servico-icon">✂️</div>
+                    <h3>Corte de Cabelo</h3>
+                    <p class="servico-descricao">Corte moderno e impecável</p>
+                    <p class="servico-preco">R$ 30</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">🧴</div>
+                    <h3>Barba</h3>
+                    <p class="servico-descricao">Design e acabamento perfeito</p>
+                    <p class="servico-preco">R$ 20</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">✂️🧴</div>
+                    <h3>Corte + Barba</h3>
+                    <p class="servico-descricao">Combo completo</p>
+                    <p class="servico-preco">R$ 45</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">👁️</div>
+                    <h3>Sobrancelha</h3>
+                    <p class="servico-descricao">Design preciso</p>
+                    <p class="servico-preco">R$ 10</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">👑</div>
+                    <h3>Pacote Completo</h3>
+                    <p class="servico-descricao">Corte + Barba + Sobrancelha</p>
+                    <p class="servico-preco">R$ 50</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section class="galeria" id="galeria">
+        <div class="container">
+            <h2 class="section-title">Galeria de Trabalhos</h2>
+            <div class="galeria-grid">
+                <div class="galeria-item">
+                    <img src="images/img4.jpg" alt="Trabalho 1">
+                    <div class="galeria-overlay">
+                        <p>Corte Premium</p>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="images/img5.jpg" alt="Trabalho 2">
+                    <div class="galeria-overlay">
+                        <p>Design Moderno</p>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="images/img6.jpg" alt="Trabalho 3">
+                    <div class="galeria-overlay">
+                        <p>Acabamento Perfeito</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AGENDAMENTO -->
+    <section class="agendamento" id="agendamento">
+        <div class="container">
+            <h2 class="section-title">Agende seu Horário</h2>
+            <div class="agendamento-container">
+                <form class="agendamento-form" id="agendamentoForm">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+                        <input 
+                            type="text" 
+                            id="nome" 
+                            name="nome" 
+                            placeholder="Seu nome" 
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="servico">Serviço</label>
+                        <select id="servico" name="servico" required>
+                            <option value="">Selecione um serviço</option>
+                            <option value="Corte de Cabelo">Corte de Cabelo - R$ 30</option>
+                            <option value="Barba">Barba - R$ 20</option>
+                            <option value="Corte + Barba">Corte + Barba - R$ 45</option>
+                            <option value="Sobrancelha">Sobrancelha - R$ 10</option>
+                            <option value="Pacote Completo">Pacote Completo - R$ 50</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="data">Data</label>
+                        <input 
+                            type="date" 
+                            id="data" 
+                            name="data" 
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="horario">Horário</label>
+                        <select id="horario" name="horario" required>
+                            <option value="">Selecione uma data primeiro</option>
+                        </select>
+                    </div>
+
+                    <div class="horarios-display" id="horariosDisplay"></div>
+
+                    <button type="submit" class="btn-primary btn-agendar-form">
+                        Agendar pelo WhatsApp
+                    </button>
+                </form>
+
+                <div class="agendamento-info">
+                    <h3>Informações Importantes</h3>
+                    <ul>
+                        <li>✓ Agendamento online com confirmação automática</li>
+                        <li>✓ Horários disponíveis de 08:00 até 18:00</li>
+                        <li>✓ Confirme sua presença com antecedência</li>
+                        <li>✓ Chegue 10 minutos antes do horário</li>
+                        <li>✓ Somos cliente-first, agende com confiança!</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contato" id="contato">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="contato-grid">
+                <div class="contato-card">
+                    <div class="contato-icon">💬</div>
+                    <h3>WhatsApp</h3>
+                    <p>Mensagem direta</p>
+                    <a href="https://wa.me/5599999999999" class="contato-link" target="_blank">
+                        (99) 99999-9999
+                    </a>
+                </div>
+                <div class="contato-card">
+                    <div class="contato-icon">📍</div>
+                    <h3>Endereço</h3>
+                    <p>Rua dos Barbeiros, 123<br>Centro - Sua Cidade, ST</p>
+                </div>
+                <div class="contato-card">
+                    <div class="contato-icon">🕐</div>
+                    <h3>Horário de Funcionamento</h3>
+                    <p>Segunda a Sexta: 08:00 - 18:00<br>Sábado: 08:00 - 16:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Barbearia Mayke. Todos os direitos reservados.</p>
+            <p>Design e Desenvolvimento | Barbearia Mayke</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

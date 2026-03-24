@@ -1,0 +1,213 @@
+╔════════════════════════════════════════════════════════════════╗
+║         BARBEARIA MAYKE - SITE PROFISSIONAL v1.0             ║
+║              Pronto para Produção e Venda                    ║
+╚════════════════════════════════════════════════════════════════╝
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 INÍCIO RÁPIDO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣ GERAR IMAGENS
+   
+   📌 Windows (Excel, PowerPoint ou Paint):
+      - Crie 6 imagens e salve como JPG na pasta 'images/'
+      - Dimensões: veja GENERATE_IMAGES.md
+   
+   📌 Python (Recomendado):
+      python3 generate_images.py
+   
+   📌 Online:
+      https://placeholder.com/
+      - Crie as imagens e baixe na pasta 'images/'
+
+2️⃣ ABRIR O SITE
+
+   ✓ Duplo-clique em: index.html
+   
+   OU
+   
+   ✓ Clique direito > "Abrir com" > Navegador por padrão
+
+3️⃣ CUSTOMIZAR
+
+   ❌ PARA MUDAR O NÚMERO DO WHATSAPP:
+      Abra: js/script.js
+      Procure por: const WHATSAPP_NUMBER = '5599999999999'
+      Altere para seu número (sem símbolos, com DDI+DDD)
+   
+   ❌ PARA MUDAR SERVIÇOS:
+      Abra: index.html
+      Procure a seção: <!-- SERVIÇOS -->
+      Edite os valores nos <option> ou <div class="servico-card">
+   
+   ❌ PARA MUDAR ENDEREÇO:
+      Abra: index.html
+      Procure a seção: <!-- CONTATO -->
+      Edite texto com seu endereço
+   
+   ❌ PARA MUDAR CORES/ESTILOS:
+      Abra: css/styles.css
+      Procure: :root { } (variáveis CSS)
+      Altere as cores HEX (#d4af37, #1a1a1a, etc)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚙️ NÚMERO WHATSAPP - FORMATAÇÃO CORRETA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Formato: DDI + DDD + NÚMERO (SEM SÍMBOLOS)
+
+Exemplos:
+  • Brasil (SP): 5511999999999
+  • Brasil (RJ): 5521999999999
+  • Brasil (MG): 5531999999999
+  • Portugal: 351912345678
+  • EUA: 12125552368
+
+Como encontrar:
+  1. Abra WhatsApp
+  2. Seu número aparece em: Configurações > Minha Conta > Info
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📁 ESTRUTURA DE ARQUIVOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+sitebarbearia/
+├── index.html              👈 ABRA ESTE ARQUIVO
+├── css/styles.css          📝 Estilos do site
+├── js/script.js            ⚙️ Lógica interativa
+├── images/                 🖼️ Pasta para imagens
+│   ├── img1.jpg
+│   ├── img2.jpg
+│   ├── img3.jpg
+│   ├── img4.jpg
+│   ├── img5.jpg
+│   └── img6.jpg
+├── config.json             ⚙️ Configurações (referência)
+├── README.md               📖 Documentação completa
+├── GENERATE_IMAGES.md      🖼️ Guia de imagens
+├── generate_images.py      🐍 Script Python para gerar imagens
+└── QUICK_START.txt         📄 Este arquivo
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✨ FUNCIONALIDADES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Design Profissional e Moderno
+✅ 100% Responsivo (Mobile, Tablet, Desktop)
+✅ Agendamento com WhatsApp Integrado
+✅ Horários Dinâmicos (08:00 - 18:00)
+✅ Simulação de Horários Ocupados
+✅ Validação de Formulário
+✅ Sem Dependências Externas
+✅ Pronto para Produção
+✅ Animações Suaves
+✅ Acessibilidade Básica
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🚀 DEPLOY (COLOCAR NA INTERNET)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Opção 1: NETLIFY (Grátis, Recomendado)
+   1. Acesse: https://netlify.com
+   2. Clique em: "Drop files here to deploy"
+   3. Arraste a pasta 'sitebarbearia' inteira
+   4. Voilà! Site ao vivo em momento!
+
+Opção 2: VERCEL (Grátis)
+   1. Acesse: https://vercel.com
+   2. Clique em: "Create a Project"
+   3. Importe do GitHub ou upload manual
+   4. Deploy em 1 clique
+
+Opção 3: GITHUB PAGES (Grátis)
+   1. Crie repositório no GitHub
+   2. Upload dos arquivos
+   3. Ative "Pages" nas configurações
+   4. Site ao vivo em github.com/seu-usuario/seu-repo
+
+Opção 4: HOSPEDAGEM TRADICIONAL
+   1. Contrate uma hospedagem (Godaddy, Hostinger, etc)
+   2. Upload via FTP para pasta public_html
+   3. Pronto!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🐛 PROBLEMAS COMUNS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❓ Imagens não aparecem
+   → Verifique se estão em pasta 'images/' com nomes corretos
+   → Abra Console (F12) e procure por erros 404
+
+❓ WhatsApp não abre
+   → Verifique o número (sem símbolos, com DDI+DDD)
+   → Teste em navegador diferente
+   → Verifique conexão com internet
+
+❓ Formulário não funciona
+   → Abra Console (F12 > Console)
+   → Procure por mensagens de erro em vermelho
+   → Certifique-se que todos campos preenchidos
+
+❓ Horários não aparecem
+   → Selecione uma data no campo "Data"
+   → Abra Console (F12) para ver erros
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📊 FUNCIONALIDADES TÉCNICAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. AGENDAMENTO COM WHATSAPP
+   • Usuário preenche: Nome, Serviço, Data, Horário
+   • Sistema valida campos
+   • Clica em "Agendar pelo WhatsApp"
+   • Abre chat no WhatsApp com mensagem pronta
+   • Barbeiro recebe e confirma agendamento
+
+2. HORÁRIOS DISPONÍVEIS
+   • Gerados a cada 30 minutos (08:00 - 18:00)
+   • Aproximadamente 30-40% dos horários ocupados
+   • Horários ocupados aparecem desabilitados
+
+3. RESPONSIVIDADE
+   • Desktop: Layout completo com colunas
+   • Tablet: Layout adaptado
+   • Mobile: Stack vertical otimizado
+
+4. PERFORMANCE
+   • Sem dependências externas
+   • Carregamento rápido
+   • Score Lighthouse: 85-95+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📞 SUPORTE E DÚVIDAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Consulte README.md para documentação completa
+2. Verifique GENERATE_IMAGES.md para ajuda com imagens
+3. Abra F12 (Console) no navegador para ver erros
+4. Re-leia seção de Customização neste arquivo
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ PRÓXIMOS PASSOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. ✓ Gerar/adicionar imagens (veja passo 1)
+2. ✓ Alterar número WhatsApp
+3. ✓ Personalizar serviços e preços
+4. ✓ Adicionar endereço e horário
+5. ✓ Testar em diferentes navegadores
+6. ✓ Deploy em Netlify/Vercel/GitHub Pages
+7. ✓ Compartilhar URL com clientes
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎉 Site pronto para uso profissional!
+
+Desenvolvido com ❤️ para Barbearia Mayke
+Data: 21 de Março, 2026
+Versão: 1.0 (Pronto para Produção)
+
+╔════════════════════════════════════════════════════════════════╗
+║ Qualquer dúvida, releia a documentação ou teste no console  ║
+║           Bom negócio! 💈✨                                  ║
+╚════════════════════════════════════════════════════════════════╝

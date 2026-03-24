@@ -1,0 +1,135 @@
+{
+  "barbearia": {
+    "nome": "BARBEARIA MAYKE",
+    "descricao": "Cortes modernos e atendimento de qualidade",
+    "endereco": "Rua dos Barbeiros, 123, Centro - Sua Cidade, ST",
+    "telefone": "5599999999999",
+    "emailContato": "contato@barbeariamayke.com.br"
+  },
+  "horarioFuncionamento": {
+    "segundaASexta": "08:00 - 18:00",
+    "sabado": "08:00 - 16:00",
+    "domingo": "Fechado",
+    "intervaloAgendamento": 30,
+    "horaInicio": 8,
+    "horaFim": 18
+  },
+  "servicos": [
+    {
+      "id": 1,
+      "nome": "Corte de Cabelo",
+      "preco": 30,
+      "descricao": "Corte moderno e impecável",
+      "icone": "✂️",
+      "duracao": 30
+    },
+    {
+      "id": 2,
+      "nome": "Barba",
+      "preco": 20,
+      "descricao": "Design e acabamento perfeito",
+      "icone": "🧴",
+      "duracao": 20
+    },
+    {
+      "id": 3,
+      "nome": "Corte + Barba",
+      "preco": 45,
+      "descricao": "Combo completo",
+      "icone": "✂️🧴",
+      "duracao": 50
+    },
+    {
+      "id": 4,
+      "nome": "Sobrancelha",
+      "preco": 10,
+      "descricao": "Design preciso",
+      "icone": "👁️",
+      "duracao": 10
+    },
+    {
+      "id": 5,
+      "nome": "Pacote Completo",
+      "preco": 50,
+      "descricao": "Corte + Barba + Sobrancelha",
+      "icone": "👑",
+      "duracao": 60
+    }
+  ],
+  "cores": {
+    "primaria": "#1a1a1a",
+    "secundaria": "#ffffff",
+    "destaque": "#d4af37",
+    "verde": "#2d5016",
+    "hover": "#2d2d2d",
+    "textoPrincipal": "#333333",
+    "textoSecundario": "#666666",
+    "bgLight": "#f5f5f5"
+  },
+  "textos": {
+    "headerLogo": "BARBEARIA MAYKE",
+    "navInicio": "Início",
+    "navServicos": "Serviços",
+    "navAgendamento": "Agendamento",
+    "navContato": "Contato",
+    "btnAgendarAgora": "Agendar Agora",
+    "heroTitulo": "Seu estilo começa aqui",
+    "heroSubtitulo": "Cortes modernos e atendimento de qualidade",
+    "heroBtn": "Agendar Horário",
+    "sobreTitle": "Sobre a Barbearia Mayke",
+    "sobreTexto1": "Com mais de 10 anos de experiência, a Barbearia Mayke é sinônimo de qualidade e profissionalismo. Nossa equipe de barbeiros experientes está sempre atualizada com as últimas tendências em cortes e estilos.",
+    "sobreTexto2": "Oferecemos um ambiente acolhedor e moderno, onde cada cliente é tratado com respeito e atenção. Utilizamos produtos de primeira qualidade e seguimos rigorosos padrões de higiene.",
+    "sobreTexto3": "Venha experimentar nosso atendimento e deixar seu estilo em nossas mãos!",
+    "servicesTitle": "Nossos Serviços",
+    "galeriaTitle": "Galeria de Trabalhos",
+    "agendamentTitle": "Agende seu Horário",
+    "agendamentNomeLabel": "Nome Completo",
+    "agendamentNomePlaceholder": "Seu nome",
+    "agendamentServicoLabel": "Serviço",
+    "agendamentDataLabel": "Data",
+    "agendamentHorarioLabel": "Horário",
+    "btnAgendarForm": "Agendar pelo WhatsApp",
+    "agendamentInfoTitle": "Informações Importantes",
+    "contatoTitle": "Entre em Contato",
+    "contatoWhatsapp": "WhatsApp",
+    "contatoWhatsappDesc": "Mensagem direta",
+    "contatoEndereco": "Endereço",
+    "contatoHorario": "Horário de Funcionamento",
+    "footerCopyright": "Barbearia Mayke. Todos os direitos reservados.",
+    "footerDesc": "Design e Desenvolvimento | Barbearia Mayke"
+  },
+  "mensagensSistema": {
+    "horarioSelecionado": "Horário selecionado com sucesso",
+    "erroNome": "Por favor, insira seu nome",
+    "erroServico": "Por favor, selecione um serviço",
+    "erroData": "Por favor, selecione uma data",
+    "erroHorario": "Por favor, selecione um horário",
+    "redirecionandoWhatsapp": "Redirecionando para WhatsApp...",
+    "sucessoAgendamento": "Agendamento realizado com sucesso!",
+    "selectDataPrimeiro": "Selecione uma data primeiro"
+  },
+  "animacoes": {
+    "duracao": 300,
+    "easing": "ease-in-out",
+    "habilitadas": true
+  },
+  "seo": {
+    "titulo": "Barbearia Mayke - Cortes Modernos e Atendimento de Qualidade",
+    "descricao": "Agende seu horário na melhor barbearia da cidade. Cortes modernos, atendimento de qualidade e ambiente acolhedor.",
+    "keywords": "barbearia, corte de cabelo, barba, sobrancelha, agendamento online, barbeiro",
+    "autor": "Barbearia Mayke",
+    "url": "https://barbeariamayke.com.br"
+  },
+  "redes": {
+    "whatsapp": "5599999999999",
+    "instagram": "@barbeariamayke",
+    "facebook": "barbeariamayke"
+  },
+  "configuracoes": {
+    "porcentagemHorariosOcupados": 35,
+    "mostrarHorariosDisplay": true,
+    "validarFormulario": true,
+    "animacoesHabilitadas": true,
+    "debugMode": false
+  }
+}
