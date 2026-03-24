@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Growthfy Tech - Desenvolvimento de Sites, CRM e SaaS que automatizam empresas e aumentam vendas. Soluções digitais sob medida para escalar resultados.">
+    <meta name="keywords" content="desenvolvimento de sites, sistema CRM, desenvolvimento SaaS, criação de sistemas, automação empresarial, software personalizado">
+    <title>Growthfy Tech - Desenvolvimento de Sites, CRM e SaaS Profissionais</title>
+    
+<link href="imgfavicon.png" sizes="32x32">
+<link href="imgfavicon.png" sizes="192x192">
+<link rel="apple-touch-icon" href="imgfavicon.png">   
+ 
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+        
+        /* Animações personalizadas */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(220, 38, 38, 0.8), 0 0 60px rgba(220, 38, 38, 0.4);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        
+        .animate-slideInLeft {
+            animation: slideInLeft 0.8s ease-out forwards;
+        }
+        
+        .animate-slideInRight {
+            animation: slideInRight 0.8s ease-out forwards;
+        }
+        
+        .animate-pulse-glow {
+            animation: pulse-glow 2s infinite;
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* Gradientes personalizados */
+        .gradient-red {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+        }
+        
+        .gradient-gold {
+            background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+        }
+        
+        .gradient-text-red {
+            background: linear-gradient(135deg, #dc2626 0%, #f87171 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .gradient-text-gold {
+            background: linear-gradient(135deg, #fbbf24 0%, #fde047 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Efeitos de hover */
+        .btn-red {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-red::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #f87171 0%, #dc2626 100%);
+            transition: left 0.3s ease;
+        }
+        
+        .btn-red:hover::before {
+            left: 0;
+        }
+        
+        .btn-red span {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .btn-gold {
+            background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-gold::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #fde047 0%, #fbbf24 100%);
+            transition: left 0.3s ease;
+        }
+        
+        .btn-gold:hover::before {
+            left: 0;
+        }
+        
+        .btn-gold span {
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Cards com efeito hover */
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(220, 38, 38, 0.2);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: rgba(220, 38, 38, 0.8);
+            box-shadow: 0 20px 60px rgba(220, 38, 38, 0.3);
+        }
+        
+        /* Background com padrão tecnológico */
+        .tech-bg {
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(220, 38, 38, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(251, 191, 36, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(220, 38, 38, 0.05) 0%, transparent 50%);
+        }
+        
+        /* Grid tecnológico */
+        .tech-grid {
+            background-image: 
+                linear-gradient(rgba(220, 38, 38, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(220, 38, 38, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        
+        /* Navbar fixa com blur */
+        .navbar-blur {
+            backdrop-filter: blur(10px);
+            background-color: rgba(0, 0, 0, 0.9);
+            border-bottom: 1px solid rgba(220, 38, 38, 0.2);
+        }
+        
+        /* Scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* WhatsApp floating button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* Delay de animações */
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+        
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+        
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
+        
+        .delay-400 {
+            animation-delay: 0.4s;
+        }
+        
+        .delay-500 {
+            animation-delay: 0.5s;
+        }
+        
+        /* Elementos escondidos inicialmente para animação */
+        .hidden-initial {
+            opacity: 0;
+        }
+        
+        /* Barra de progresso dourada */
+        .progress-bar {
+            height: 4px;
+            background: linear-gradient(90deg, #fbbf24 0%, #d97706 100%);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            transition: width 0.3s ease;
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-red': '#dc2626',
+                        'brand-gold': '#fbbf24',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Barra de progresso -->
+    <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+    
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 navbar-blur transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 rounded-lg gradient-red flex items-center justify-center">
+                        <i class="fas fa-code text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold gradient-text-gold">Growthfy Tech</h1>
+                        <p class="text-xs text-gray-400">Soluções Digitais</p>
+                    </div>
+                </div>
+                
+                <!-- Menu Desktop -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-300 hover:text-brand-gold transition-colors duration-300 font-medium">Home</a>
+                    <a href="#servicos" class="text-gray-300 hover:text-brand-gold transition-colors duration-300 font-medium">Serviços</a>
+                    <a href="#portfolio" class="text-gray-300 hover:text-brand-gold transition-colors duration-300 font-medium">Portfólio</a>
+                    <a href="#processo" class="text-gray-300 hover:text-brand-gold transition-colors duration-300 font-medium">Processo</a>
+                    <a href="#sobre" class="text-gray-300 hover:text-brand-gold transition-colors duration-300 font-medium">Sobre</a>
+                    <a href="#contato" class="text-gray-300 hover:text-brand-gold transition-colors duration-300 font-medium">Contato</a>
+                    <a href="https://wa.me/5527999301532" target="_blank" class="btn-red px-6 py-3 rounded-lg text-white font-semibold flex items-center space-x-2">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Falar no WhatsApp</span>
+                    </a>
+                </div>
+                
+                <!-- Menu Mobile Button -->
+                <button class="lg:hidden text-white text-2xl" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Menu Mobile -->
+        <div class="hidden lg:hidden bg-black border-t border-gray-800" id="mobileMenu">
+            <div class="container mx-auto px-4 py-6 space-y-4">
+                <a href="#home" class="block text-gray-300 hover:text-brand-gold transition-colors duration-300 font-medium py-2">Home</a>
+                <a href="#servicos" class="block text-gray-300 hover:text-brand-gold transition-colors duration-300 font-medium py-2">Serviços</a>
+                <a href="#portfolio" class="block text-gray-300 hover:text-brand-gold transition-colors duration-300 font-medium py-2">Portfólio</a>
+                <a href="#processo" class="block text-gray-300 hover:text-brand-gold transition-colors duration-300 font-medium py-2">Processo</a>
+                <a href="#sobre" class="block text-gray-300 hover:text-brand-gold transition-colors duration-300 font-medium py-2">Sobre</a>
+                <a href="#contato" class="block text-gray-300 hover:text-brand-gold transition-colors duration-300 font-medium py-2">Contato</a>
+                <a href="https://wa.me/5527999301532" target="_blank" class="btn-red px-6 py-3 rounded-lg text-white font-semibold flex items-center justify-center space-x-2">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Falar no WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 tech-bg tech-grid min-h-screen flex items-center relative overflow-hidden">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto text-center">
+                <!-- Headline -->
+                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-black mb-6 leading-tight hidden-initial animate-fadeInUp">
+                    Desenvolvimento de <span class="gradient-text-red">Sites, CRM e SaaS</span> que <span class="gradient-text-gold">automatizam empresas</span> e aumentam vendas
+                </h1>
+                
+                <!-- Subheadline -->
+                <p class="text-lg sm:text-xl lg:text-2xl text-gray-400 mb-12 max-w-4xl mx-auto hidden-initial animate-fadeInUp delay-200">
+                    Criamos soluções digitais sob medida para empresas que querem <span class="text-brand-gold font-semibold">escalar resultados</span>, <span class="text-brand-gold font-semibold">automatizar processos</span> e crescer com tecnologia.
+                </p>
+                
+                <!-- CTAs -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 hidden-initial animate-fadeInUp delay-300">
+                    <a href="#contato" class="btn-red px-8 py-5 rounded-xl text-white font-bold text-lg flex items-center space-x-3 shadow-2xl animate-pulse-glow w-full sm:w-auto justify-center">
+                        <i class="fas fa-rocket"></i>
+                        <span>Solicitar Orçamento</span>
+                    </a>
+                    <a href="https://wa.me/5527999301532" target="_blank" class="btn-gold px-8 py-5 rounded-xl text-black font-bold text-lg flex items-center space-x-3 shadow-2xl w-full sm:w-auto justify-center">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                        <span>Falar no WhatsApp</span>
+                    </a>
+                </div>
+                
+                <!-- Stats -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
+
+    <!-- Projetsos -->
+    <div class="bg-gradient-to-br from-gray-900 to-black p-6 rounded-xl border border-brand-red/30 text-center">
+<div class="text-4xl font-black gradient-text-gold mb-2">+300%</div>
+        <div class="text-gray-400">Aumento Médio em Conversões</div>
+    </div>
+    <!-- Satisfação -->
+    <div class="bg-gradient-to-br from-gray-900 to-black p-6 rounded-xl border border-brand-red/30 text-center">
+        <div class="text-4xl font-black gradient-text-gold mb-2">98%</div>
+        <div class="text-gray-400">Satisfação dos Clientes</div>
+    </div>
+
+    <!-- Suporte -->
+    <div class="bg-gradient-to-br from-gray-900 to-black p-6 rounded-xl border border-brand-red/30 text-center">
+        <div class="text-4xl font-black gradient-text-gold mb-2">24/7 </div>
+        <div class="text-gray-400">Suporte Dedicado</div>
+    </div>
+
+</div>
+        
+        <!-- Elementos decorativos -->
+        <div class="absolute top-20 left-10 w-72 h-72 bg-brand-red/10 rounded-full blur-3xl animate-float"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl animate-float" style="animation-delay: 1s;"></div>
+    </section>
+    
+    <!-- Problema do Cliente -->
+    <section class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6">
+                        Sua empresa está <span class="gradient-text-red">perdendo dinheiro</span> por falta de tecnologia?
+                    </h2>
+                    <p class="text-xl text-gray-400">Esses são os problemas mais comuns que empresas enfrentam sem soluções digitais adequadas</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Problema 1 -->
+                    <div class="bg-gradient-to-br from-red-900/20 to-black p-8 rounded-xl border border-red-600/40 card-hover">
+                        <div class="w-16 h-16 rounded-xl gradient-red flex items-center justify-center mb-6">
+                            <i class="fas fa-users-slash text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-white">Poucos Clientes</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Sem presença digital profissional, sua empresa fica invisível para milhares de potenciais clientes que buscam seus serviços online.
+                        </p>
+                    </div>
+                    
+                    <!-- Problema 2 -->
+                    <div class="bg-gradient-to-br from-red-900/20 to-black p-8 rounded-xl border border-red-600/40 card-hover">
+                        <div class="w-16 h-16 rounded-xl gradient-red flex items-center justify-center mb-6">
+                            <i class="fas fa-clock text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-white">Processos Manuais</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Tarefas repetitivas consomem horas do seu time, aumentam custos operacionais e impedem o crescimento escalável do negócio.
+                        </p>
+                    </div>
+                    
+                    <!-- Problema 3 -->
+                    <div class="bg-gradient-to-br from-red-900/20 to-black p-8 rounded-xl border border-red-600/40 card-hover">
+                        <div class="w-16 h-16 rounded-xl gradient-red flex items-center justify-center mb-6">
+                            <i class="fas fa-chart-line text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-white">Gestão Ineficiente</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Sem sistemas integrados, você perde controle sobre vendas, clientes e métricas importantes para tomar decisões estratégicas.
+                        </p>
+                    </div>
+                    
+                    <!-- Problema 4 -->
+                    <div class="bg-gradient-to-br from-red-900/20 to-black p-8 rounded-xl border border-red-600/40 card-hover">
+                        <div class="w-16 h-16 rounded-xl gradient-red flex items-center justify-center mb-6">
+                            <i class="fas fa-money-bill-wave text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-white">Custos Elevados</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Desperdício de recursos com processos manuais, retrabalho e falta de automação aumentam desnecessariamente seus custos.
+                        </p>
+                    </div>
+                    
+                    <!-- Problema 5 -->
+                    <div class="bg-gradient-to-br from-red-900/20 to-black p-8 rounded-xl border border-red-600/40 card-hover">
+                        <div class="w-16 h-16 rounded-xl gradient-red flex items-center justify-center mb-6">
+                            <i class="fas fa-user-times text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-white">Perda de Clientes</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Atendimento lento, falta de acompanhamento e desorganização fazem seus clientes migrarem para a concorrência.
+                        </p>
+                    </div>
+                    
+                    <!-- Problema 6 -->
+                    <div class="bg-gradient-to-br from-red-900/20 to-black p-8 rounded-xl border border-red-600/40 card-hover">
+                        <div class="w-16 h-16 rounded-xl gradient-red flex items-center justify-center mb-6">
+                            <i class="fas fa-ban text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-white">Crescimento Limitado</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            Sem tecnologia, sua empresa não consegue escalar operações e fica estagnada, perdendo oportunidades de mercado.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Soluções -->
+    <section class="py-20 bg-gradient-to-b from-gray-900 to-black tech-bg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6">
+                        A <span class="gradient-text-gold">Growthfy Tech</span> resolve seus problemas com <span class="gradient-text-red">tecnologia de ponta</span>
+                    </h2>
+                    <p class="text-xl text-gray-400">Transformamos desafios em oportunidades através de soluções digitais inteligentes</p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Soluções Lista -->
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-lg gradient-gold flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-check text-black text-xl font-bold"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-white">Presença Digital Profissional</h3>
+                                <p class="text-gray-400">Sites modernos e otimizados que atraem clientes 24/7 e transmitem autoridade no mercado.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-lg gradient-gold flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-check text-black text-xl font-bold"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-white">Automação Completa de Processos</h3>
+                                <p class="text-gray-400">Sistemas inteligentes que eliminam tarefas repetitivas e liberam seu time para o que realmente importa.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-lg gradient-gold flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-check text-black text-xl font-bold"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-white">Gestão Centralizada e Inteligente</h3>
+                                <p class="text-gray-400">CRM personalizado que organiza clientes, vendas e métricas em um só lugar, com dashboards em tempo real.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-lg gradient-gold flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-check text-black text-xl font-bold"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-white">Redução de Custos Operacionais</h3>
+                                <p class="text-gray-400">Softwares sob medida que otimizam recursos, eliminam desperdícios e aumentam a produtividade.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-lg gradient-gold flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-check text-black text-xl font-bold"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-white">Crescimento Escalável</h3>
+                                <p class="text-gray-400">Plataformas SaaS que crescem junto com seu negócio, permitindo expansão sem limites.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Box -->
+                    <div class="bg-gradient-to-br from-red-900/40 to-black p-10 rounded-2xl border border-brand-gold/50 shadow-2xl">
+                        <div class="text-center">
+                            <div class="w-20 h-20 rounded-full gradient-gold flex items-center justify-center mx-auto mb-6">
+                                <i class="fas fa-crown text-black text-3xl"></i>
+                            </div>
+                            <h3 class="text-3xl font-black mb-4 gradient-text-gold">Transforme Seu Negócio Hoje</h3>
+                            <p class="text-gray-300 mb-8 text-lg leading-relaxed">
+                                Mais de 100 empresas já automatizaram processos e aumentaram suas vendas com nossas soluções. Seja a próxima!
+                            </p>
+                            <div class="space-y-4">
+                                <a href="https://wa.me/5527999301532" target="_blank" class="btn-gold px-8 py-5 rounded-xl text-black font-bold text-lg flex items-center justify-center space-x-3 shadow-2xl">
+                                    <i class="fab fa-whatsapp text-xl"></i>
+                                    <span>Falar com Especialista</span>
+                                </a>
+                                <a href="#contato" class="block text-brand-gold hover:text-yellow-300 transition-colors font-semibold">
+                                    Ou solicite um orçamento →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Benefícios -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6">
+                        Benefícios que <span class="gradient-text-gold">Transformam</span> Seu Negócio
+                    </h2>
+                    <p class="text-xl text-gray-400">Resultados reais e mensuráveis para empresas que investem em tecnologia</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Benefício 1 -->
+                    <div class="bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-brand-gold/30 card-hover">
+                        <div class="flex items-start space-x-6">
+                            <div class="w-16 h-16 rounded-xl gradient-gold flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-users text-black text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-3 gradient-text-gold">Mais Clientes</h3>
+                                <p class="text-gray-400 leading-relaxed mb-4">
+                                    Atraia automaticamente novos clientes através de sites otimizados para conversão e presença digital estratégica. Aumente sua base de clientes em até 300%.
+                                </p>
+                                <div class="flex items-center space-x-2 text-brand-red font-semibold">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <span>Crescimento comprovado</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Benefício 2 -->
+                    <div class="bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-brand-gold/30 card-hover">
+                        <div class="flex items-start space-x-6">
+                            <div class="w-16 h-16 rounded-xl gradient-gold flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-robot text-black text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-3 gradient-text-gold">Automação de Processos</h3>
+                                <p class="text-gray-400 leading-relaxed mb-4">
+                                    Elimine tarefas manuais e repetitivas com sistemas inteligentes. Economize até 80% do tempo da sua equipe e reduza erros operacionais.
+                                </p>
+                                <div class="flex items-center space-x-2 text-brand-red font-semibold">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Economize tempo e recursos</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Benefício 3 -->
+                    <div class="bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-brand-gold/30 card-hover">
+                        <div class="flex items-start space-x-6">
+                            <div class="w-16 h-16 rounded-xl gradient-gold flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-chart-line text-black text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-3 gradient-text-gold">Gestão Eficiente</h3>
+                                <p class="text-gray-400 leading-relaxed mb-4">
+                                    Tenha controle total sobre vendas, clientes e métricas com dashboards em tempo real. Tome decisões baseadas em dados concretos.
+                                </p>
+                                <div class="flex items-center space-x-2 text-brand-red font-semibold">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>Decisões inteligentes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Benefício 4 -->
+                    <div class="bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-brand-gold/30 card-hover">
+                        <div class="flex items-start space-x-6">
+                            <div class="w-16 h-16 rounded-xl gradient-gold flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-rocket text-black text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-3 gradient-text-gold">Crescimento Escalável</h3>
+                                <p class="text-gray-400 leading-relaxed mb-4">
+                                    Expanda seu negócio sem limites com plataformas que crescem junto com você. Atenda 10x mais clientes sem aumentar proporcionalmente custos.
+                                </p>
+                                <div class="flex items-center space-x-2 text-brand-red font-semibold">
+                                    <i class="fas fa-expand-arrows-alt"></i>
+                                    <span>Expansão ilimitada</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Serviços -->
+    <section id="servicos" class="py-20 bg-gradient-to-b from-black to-gray-900 tech-grid">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6">
+                        Nossos <span class="gradient-text-red">Serviços</span>
+                    </h2>
+                    <p class="text-xl text-gray-400">Soluções tecnológicas completas para empresas que querem crescer</p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Serviço 1: Sites -->
+                    <div class="bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-brand-red/40 card-hover relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-brand-red/10 rounded-full blur-2xl"></div>
+                        <div class="relative z-10">
+                            <div class="w-20 h-20 rounded-2xl gradient-gold flex items-center justify-center mb-6">
+                                <i class="fas fa-laptop-code text-black text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 text-white">Desenvolvimento de Sites</h3>
+                            <p class="text-gray-400 mb-6 leading-relaxed">
+                                Sites profissionais, responsivos e otimizados para conversão. Atraia clientes 24/7 com presença digital de alto impacto.
+                            </p>
+                            
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-center space-x-3 text-gray-300">
+                                    <i class="fas fa-check-circle text-brand-gold"></i>
+                                    <span>Design moderno e responsivo</span>
+                                </li>
+                                <li class="flex items-center space-x-3 text-gray-300">
+                                    <i class="fas fa-check-circle text-brand-gold"></i>
+                                    <span>SEO otimizado</span>
+                                </li>
+                                <li class="flex items-center space-x-3 text-gray-300">
+                                    <i class="fas fa-check-circle text-brand-gold"></i>
+                                    <span>Integração com WhatsApp</span>
+                                </li>
+                                <li class="flex items-center space-x-3 text-gray-300">
+                                    <i class="fas fa-check-circle text-brand-gold"></i>
+                                    <span>Alta velocidade de carregamento</span>
+                                </li>
+                            </ul>
+                            
+                            <a href="https://wa.me/5527999301532?text=Olá! Tenho interesse em Desenvolvimento de Sites" target="_blank" class="btn-red px-6 py-4 rounded-xl text-white font-semibold flex items-center justify-center space-x-2 w-full">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>Solicitar Orçamento</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Serviço 2: CRM -->
+                    <div class="bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-brand-red/40 card-hover relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-brand-gold/10 rounded-full blur-2xl"></div>
+                        <div class="relative z-10">
+                            <div class="w-20 h-20 rounded-2xl gradient-gold flex items-center justify-center mb-6">
+                                <i class="fas fa-users-cog text-black text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 text-white">Desenvolvimento de CRM</h3>
+                            <p class="text-gray-400 mb-6 leading-relaxed">
+                                Sistemas de gestão de clientes personalizados para organizar vendas, atendimentos e aumentar a retenção.
+                            </p>
+                            
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-center space-x-3 text-gray-300">
+                                    <i class="fas fa-check-circle text-brand-gold"></i>
+                                    <span>Gestão completa de clientes</span>
+                                </li>
+                                <li class="flex items-center space-x-3 text-gray-300">
+                                    <i class="fas fa-check-circle text-brand-gold"></i>
+                                    <span>Funil de vendas automatizado</span>
+                                </li>
+                                <li class="flex items-center space-x-3 text-gray-300">
+                                    <i class="fas fa-check-circle text-brand-gold"></i>
+                                    <span>Dashboards em tempo real</span>
+                                </li>
+                                <li class="flex items-center space-x-3 text-gray-300">
+                                    <i class="fas fa-check-circle text-brand-gold"></i>
+                                    <span>Relatórios personalizados</span>
+                                </li>
+                            </ul>
+                            
+                            <a href="https://wa.me/5527999301532?text=Olá! Tenho interesse em Desenvolvimento de CRM" target="_blank" class="btn-red px-6 py-4 rounded-xl text-white font-semibold flex items-center justify-center space-x-2 w-full">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>Solicitar Orçamento</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Serviço 3: SaaS -->
+                    <div class="bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-brand-red/40 card-hover relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-brand-red/10 rounded-full blur-2xl"></div>
+                        <div class="relative z-10">
+                            <div class="w-20 h-20 rounded-2xl gradient-gold flex items-center justify-center mb-6">
+                                <i class="fas fa-cloud text-black text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 text-white">Desenvolvimento de SaaS</h3>
+                            <p class="text-gray-400 mb-6 leading-relaxed">
+                                Plataformas completas na nuvem que escalam seu negócio e automatizam operações complexas.
+                            </p>
+                            
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-center space-x-3 text-gray-300">
+                                    <i class="fas fa-check-circle text-brand-gold"></i>
+                                    <span>Plataforma escalável</span>
+                                </li>
+                                <li class="flex items-center space-x-3 text-gray-300">
+                                    <i class="fas fa-check-circle text-brand-gold"></i>
+                                    <span>Multi-tenant architecture</span>
+                                </li>
+                                <li class="flex items-center space-x-3 text-gray-300">
+                                    <i class="fas fa-check-circle text-brand-gold"></i>
+                                    <span>Integrações avançadas</span>
+                                </li>
+                                <li class="flex items-center space-x-3 text-gray-300">
+                                    <i class="fas fa-check-circle text-brand-gold"></i>
+                                    <span>Segurança empresarial</span>
+                                </li>
+                            </ul>
+                            
+                            <a href="https://wa.me/5527999301532?text=Olá! Tenho interesse em Desenvolvimento de SaaS" target="_blank" class="btn-red px-6 py-4 rounded-xl text-white font-semibold flex items-center justify-center space-x-2 w-full">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>Solicitar Orçamento</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!-- Portfólio -->
+<section id="portfolio" class="py-20 bg-black">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6">
+                    Projetos que <span class="gradient-text-gold">Transformam</span> Negócios
+                </h2>
+                <p class="text-xl text-gray-400">
+                    Conheça alguns dos projetos que desenvolvemos para empresas de diversos segmentos
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Projeto 1 -->
+                <div class="bg-gradient-to-br from-gray-900 to-black rounded-2xl border border-brand-red/30 overflow-hidden card-hover">
+
+                    <div class="h-64 overflow-hidden">
+                        <img src="img1.png" alt="Site para Clínica Médica"
+                        class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+
+                    <div class="p-8">
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span class="px-3 py-1 bg-brand-red/20 text-brand-red text-sm rounded-full font-semibold">Website</span>
+                            <span class="px-3 py-1 bg-brand-gold/20 text-brand-gold text-sm rounded-full font-semibold">Saúde</span>
+                        </div>
+
+                        <h3 class="text-2xl font-bold mb-3 text-white">Site para Clínica Médica</h3>
+
+                        <p class="text-gray-400 mb-6 leading-relaxed">
+                            Desenvolvimento de site institucional moderno com agendamento online integrado,
+                            aumento de 250% nas marcações de consultas.
+                        </p>
+
+                        <div class="flex items-center justify-between">
+                            <div class="text-brand-gold font-semibold">
+                                +250% conversão
+                            </div>
+
+                            <a href="https://wa.me/5527999301532?text=Olá! Quero um projeto similar ao Site para Clínica"
+                               target="_blank"
+                               class="text-brand-red hover:text-red-400 transition-colors font-semibold">
+                                Ver mais →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 2 -->
+                <div class="bg-gradient-to-br from-gray-900 to-black rounded-2xl border border-brand-red/30 overflow-hidden card-hover">
+
+                    <div class="h-64 overflow-hidden">
+                        <img src="img2.png" alt="Sistema CRM"
+                        class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+
+                    <div class="p-8">
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span class="px-3 py-1 bg-brand-red/20 text-brand-red text-sm rounded-full font-semibold">CRM</span>
+                            <span class="px-3 py-1 bg-brand-gold/20 text-brand-gold text-sm rounded-full font-semibold">Vendas</span>
+                        </div>
+
+                        <h3 class="text-2xl font-bold mb-3 text-white">Sistema CRM Personalizado</h3>
+
+                        <p class="text-gray-400 mb-6 leading-relaxed">
+                            CRM completo com automação de vendas, gestão de leads e dashboards analíticos.
+                            Aumento de 180% na produtividade da equipe.
+                        </p>
+
+                        <div class="flex items-center justify-between">
+                            <div class="text-brand-gold font-semibold">
+                                +180% produtividade
+                            </div>
+
+                            <a href="https://wa.me/5527999301532?text=Olá! Quero um projeto similar ao Sistema CRM"
+                               target="_blank"
+                               class="text-brand-red hover:text-red-400 transition-colors font-semibold">
+                                Ver mais →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 3 -->
+                <div class="bg-gradient-to-br from-gray-900 to-black rounded-2xl border border-brand-red/30 overflow-hidden card-hover">
+
+                    <div class="h-64 overflow-hidden">
+                        <img src="img3.webp" alt="Plataforma SaaS"
+                        class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+
+                    <div class="p-8">
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span class="px-3 py-1 bg-brand-red/20 text-brand-red text-sm rounded-full font-semibold">SaaS</span>
+                            <span class="px-3 py-1 bg-brand-gold/20 text-brand-gold text-sm rounded-full font-semibold">Gestão</span>
+                        </div>
+
+                        <h3 class="text-2xl font-bold mb-3 text-white">Plataforma SaaS de Gestão</h3>
+
+                        <p class="text-gray-400 mb-6 leading-relaxed">
+                            Plataforma completa na nuvem para gestão empresarial com módulos de vendas,
+                            estoque e financeiro. Escalou para 500+ empresas.
+                        </p>
+
+                        <div class="flex items-center justify-between">
+                            <div class="text-brand-gold font-semibold">
+                                500+ empresas
+                            </div>
+
+                            <a href="https://wa.me/5527999301532?text=Olá! Quero um projeto similar à Plataforma SaaS"
+                               target="_blank"
+                               class="text-brand-red hover:text-red-400 transition-colors font-semibold">
+                                Ver mais →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 4 -->
+                <div class="bg-gradient-to-br from-gray-900 to-black rounded-2xl border border-brand-red/30 overflow-hidden card-hover">
+
+                    <div class="h-64 overflow-hidden">
+                        <img src="img4.webp" alt="Portal Imobiliário"
+                        class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+
+                    <div class="p-8">
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span class="px-3 py-1 bg-brand-red/20 text-brand-red text-sm rounded-full font-semibold">Website</span>
+                            <span class="px-3 py-1 bg-brand-gold/20 text-brand-gold text-sm rounded-full font-semibold">Imobiliário</span>
+                        </div>
+
+                        <h3 class="text-2xl font-bold mb-3 text-white">Portal Imobiliário</h3>
+
+                        <p class="text-gray-400 mb-6 leading-relaxed">
+                            Site imobiliário com sistema de busca avançada, tour virtual 360° e integração com WhatsApp.
+                            Aumento de 320% em leads qualificados.
+                        </p>
+
+                        <div class="flex items-center justify-between">
+                            <div class="text-brand-gold font-semibold">
+                                +320% leads
+                            </div>
+
+                            <a href="https://wa.me/5527999301532?text=Olá! Quero um projeto similar ao Portal Imobiliário"
+                               target="_blank"
+                               class="text-brand-red hover:text-red-400 transition-colors font-semibold">
+                                Ver mais →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+                <!-- CTA após portfólio -->
+                <div class="mt-16 text-center">
+                    <div class="bg-gradient-to-r from-brand-red/20 via-brand-gold/20 to-brand-red/20 p-12 rounded-2xl border border-brand-gold/40">
+                        <h3 class="text-3xl font-black mb-4 gradient-text-gold">Pronto para ter um projeto vencedor?</h3>
+                        <p class="text-xl text-gray-300 mb-8">Transforme sua ideia em realidade com a Growthfy Tech</p>
+                        <a href="https://wa.me/5527999301532?text=Olá! Quero desenvolver um projeto com a Growthfy Tech" target="_blank" class="btn-gold px-10 py-5 rounded-xl text-black font-bold text-lg inline-flex items-center space-x-3 shadow-2xl">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                            <span>Iniciar Meu Projeto</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Processo -->
+    <section id="processo" class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6">
+                        Como <span class="gradient-text-red">Funciona</span> Nosso Processo
+                    </h2>
+                    <p class="text-xl text-gray-400">Metodologia comprovada para entregar projetos de sucesso</p>
+                </div>
+                
+                <div class="relative">
+                    <!-- Linha conectora -->
+                    <div class="hidden lg:block absolute top-0 left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-brand-red via-brand-gold to-brand-red"></div>
+                    
+                    <!-- Etapas -->
+                    <div class="space-y-12">
+                        <!-- Etapa 1 -->
+                        <div class="relative grid lg:grid-cols-2 gap-8 items-center">
+                            <div class="lg:text-right">
+                                <div class="bg-gradient-to-br from-red-900/40 to-black p-8 rounded-2xl border border-brand-red/40 card-hover inline-block">
+                                    <div class="flex lg:flex-row-reverse items-center space-x-reverse space-x-6">
+                                        <div class="w-16 h-16 rounded-xl gradient-red flex items-center justify-center flex-shrink-0">
+                                            <i class="fas fa-stethoscope text-white text-2xl"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-2xl font-bold mb-3 text-white">1. Diagnóstico do Negócio</h3>
+                                            <p class="text-gray-400 leading-relaxed">
+                                                Analisamos profundamente seu negócio, desafios, objetivos e oportunidades. Identificamos exatamente o que você precisa para crescer.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hidden lg:block"></div>
+                            <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full gradient-gold border-4 border-black hidden lg:block"></div>
+                        </div>
+                        
+                        <!-- Etapa 2 -->
+                        <div class="relative grid lg:grid-cols-2 gap-8 items-center">
+                            <div class="hidden lg:block"></div>
+                            <div class="lg:text-left">
+                                <div class="bg-gradient-to-br from-yellow-900/40 to-black p-8 rounded-2xl border border-brand-gold/40 card-hover inline-block">
+                                    <div class="flex items-center space-x-6">
+                                        <div class="w-16 h-16 rounded-xl gradient-gold flex items-center justify-center flex-shrink-0">
+                                            <i class="fas fa-lightbulb text-black text-2xl"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-2xl font-bold mb-3 text-white">2. Planejamento da Solução</h3>
+                                            <p class="text-gray-400 leading-relaxed">
+                                                Criamos um plano estratégico personalizado com tecnologias ideais, arquitetura do sistema e cronograma detalhado.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full gradient-gold border-4 border-black hidden lg:block"></div>
+                        </div>
+                        
+                        <!-- Etapa 3 -->
+                        <div class="relative grid lg:grid-cols-2 gap-8 items-center">
+                            <div class="lg:text-right">
+                                <div class="bg-gradient-to-br from-red-900/40 to-black p-8 rounded-2xl border border-brand-red/40 card-hover inline-block">
+                                    <div class="flex lg:flex-row-reverse items-center space-x-reverse space-x-6">
+                                        <div class="w-16 h-16 rounded-xl gradient-red flex items-center justify-center flex-shrink-0">
+                                            <i class="fas fa-code text-white text-2xl"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-2xl font-bold mb-3 text-white">3. Desenvolvimento</h3>
+                                            <p class="text-gray-400 leading-relaxed">
+                                                Nossa equipe especializada desenvolve sua solução com código limpo, tecnologias modernas e foco total em performance e segurança.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hidden lg:block"></div>
+                            <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full gradient-gold border-4 border-black hidden lg:block"></div>
+                        </div>
+                        
+                        <!-- Etapa 4 -->
+                        <div class="relative grid lg:grid-cols-2 gap-8 items-center">
+                            <div class="hidden lg:block"></div>
+                            <div class="lg:text-left">
+                                <div class="bg-gradient-to-br from-yellow-900/40 to-black p-8 rounded-2xl border border-brand-gold/40 card-hover inline-block">
+                                    <div class="flex items-center space-x-6">
+                                        <div class="w-16 h-16 rounded-xl gradient-gold flex items-center justify-center flex-shrink-0">
+                                            <i class="fas fa-rocket text-black text-2xl"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-2xl font-bold mb-3 text-white">4. Entrega e Suporte</h3>
+                                            <p class="text-gray-400 leading-relaxed">
+                                                Entregamos seu projeto no prazo, com treinamento completo e suporte contínuo para garantir o sucesso total da implementação.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full gradient-gold border-4 border-black hidden lg:block"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA Processo -->
+                <div class="mt-16 text-center">
+                    <p class="text-xl text-gray-300 mb-6">Pronto para começar sua transformação digital?</p>
+                    <a href="https://wa.me/5527999301532?text=Olá! Quero iniciar um projeto com a Growthfy Tech" target="_blank" class="btn-red px-10 py-5 rounded-xl text-white font-bold text-lg inline-flex items-center space-x-3 shadow-2xl animate-pulse-glow">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                        <span>Iniciar Agora</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Prova Social / Depoimentos -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6">
+                        O Que Nossos <span class="gradient-text-gold">Clientes</span> Dizem
+                    </h2>
+                    <p class="text-xl text-gray-400">Depoimentos reais de empresas que transformaram seus negócios conosco</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Depoimento 1 -->
+                    <div class="bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-brand-gold/30 card-hover">
+                        <div class="flex items-center mb-6">
+                            <div class="w-14 h-14 rounded-full gradient-gold flex items-center justify-center text-black font-bold text-xl mr-4">
+                                RC
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold">Ricardo Costa</h4>
+                                <p class="text-gray-400 text-sm">CEO - Clínica Vida Plena</p>
+                            </div>
+                        </div>
+                        <div class="flex mb-4">
+                            <i class="fas fa-star text-brand-gold"></i>
+                            <i class="fas fa-star text-brand-gold"></i>
+                            <i class="fas fa-star text-brand-gold"></i>
+                            <i class="fas fa-star text-brand-gold"></i>
+                            <i class="fas fa-star text-brand-gold"></i>
+                        </div>
+                        <p class="text-gray-300 leading-relaxed italic">
+                            "O site desenvolvido pela Growthfy Tech triplicou nossos agendamentos online. A equipe é extremamente profissional e entregou além do esperado. Recomendo!"
+                        </p>
+                    </div>
+                    
+                    <!-- Depoimento 2 -->
+                    <div class="bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-brand-gold/30 card-hover">
+                        <div class="flex items-center mb-6">
+                            <div class="w-14 h-14 rounded-full gradient-gold flex items-center justify-center text-black font-bold text-xl mr-4">
+                                MF
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold">Mariana Fernandes</h4>
+                                <p class="text-gray-400 text-sm">Diretora Comercial - VendaMais</p>
+                            </div>
+                        </div>
+                        <div class="flex mb-4">
+                            <i class="fas fa-star text-brand-gold"></i>
+                            <i class="fas fa-star text-brand-gold"></i>
+                            <i class="fas fa-star text-brand-gold"></i>
+                            <i class="fas fa-star text-brand-gold"></i>
+                            <i class="fas fa-star text-brand-gold"></i>
+                        </div>
+                        <p class="text-gray-300 leading-relaxed italic">
+                            "O CRM personalizado revolucionou nossa gestão de vendas. Aumentamos 180% a produtividade da equipe e não perdemos mais nenhum lead. Investimento que se pagou rapidamente!"
+                        </p>
+                    </div>
+                    
+                    <!-- Depoimento 3 -->
+                    <div class="bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-brand-gold/30 card-hover">
+                        <div class="flex items-center mb-6">
+                            <div class="w-14 h-14 rounded-full gradient-gold flex items-center justify-center text-black font-bold text-xl mr-4">
+                                PS
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold">Paulo Silva</h4>
+                                <p class="text-gray-400 text-sm">Fundador - TechStartup</p>
+                            </div>
+                        </div>
+                        <div class="flex mb-4">
+                            <i class="fas fa-star text-brand-gold"></i>
+                            <i class="fas fa-star text-brand-gold"></i>
+                            <i class="fas fa-star text-brand-gold"></i>
+                            <i class="fas fa-star text-brand-gold"></i>
+                            <i class="fas fa-star text-brand-gold"></i>
+                        </div>
+                        <p class="text-gray-300 leading-relaxed italic">
+                            "A plataforma SaaS desenvolvida escalou perfeitamente. Começamos com 10 clientes e hoje atendemos mais de 500 empresas. A arquitetura é robusta e o suporte é impecável!"
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Badges de confiança -->
+                <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 rounded-full gradient-gold flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-shield-alt text-black text-2xl"></i>
+                        </div>
+                        <p class="text-gray-300 font-semibold">100% Seguro</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 rounded-full gradient-gold flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-clock text-black text-2xl"></i>
+                        </div>
+                        <p class="text-gray-300 font-semibold">Entrega no Prazo</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 rounded-full gradient-gold flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-headset text-black text-2xl"></i>
+                        </div>
+                        <p class="text-gray-300 font-semibold">Suporte 24/7</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 rounded-full gradient-gold flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-trophy text-black text-2xl"></i>
+                        </div>
+                        <p class="text-gray-300 font-semibold">Qualidade Premium</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sobre -->
+    <section id="sobre" class="py-20 bg-gradient-to-b from-black to-gray-900 tech-bg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Conteúdo -->
+                    <div>
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6">
+                            Sobre a <span class="gradient-text-gold">Growthfy Tech</span>
+                        </h2>
+                        <p class="text-xl text-gray-400 mb-6 leading-relaxed">
+                            Somos uma empresa de tecnologia especializada em <span class="text-brand-gold font-semibold">desenvolvimento de soluções digitais</span> que transformam negócios.
+                        </p>
+                        <p class="text-lg text-gray-400 mb-6 leading-relaxed">
+                            Nossa missão é levar <span class="text-brand-red font-semibold">inovação tecnológica</span> para empresas de todos os portes, criando sites profissionais, sistemas CRM personalizados e plataformas SaaS escaláveis.
+                        </p>
+                        <p class="text-lg text-gray-400 mb-8 leading-relaxed">
+                            Com uma equipe de desenvolvedores especializados e designers experientes, utilizamos as mais modernas tecnologias do mercado para entregar projetos que geram <span class="text-brand-gold font-semibold">resultados reais e mensuráveis</span>.
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="https://wa.me/5527999301532?text=Olá! Quero conhecer melhor a Growthfy Tech" target="_blank" class="btn-gold px-8 py-4 rounded-xl text-black font-bold text-lg flex items-center justify-center space-x-3">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>Falar Conosco</span>
+                            </a>
+                            <a href="https://www.instagram.com/growthfy_tech__sites__sistemas?igsh=cWY2bnpxdmFneno0" target="_blank" class="border-2 border-brand-gold px-8 py-4 rounded-xl text-brand-gold font-bold text-lg flex items-center justify-center space-x-3 hover:bg-brand-gold hover:text-black transition-all">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Valores / Diferenciais -->
+                    <div class="space-y-6">
+                        <div class="bg-gradient-to-br from-gray-900 to-black p-6 rounded-xl border border-brand-gold/30 card-hover">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 rounded-lg gradient-red flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-medal text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2 text-white">Excelência</h3>
+                                    <p class="text-gray-400">Comprometimento com a qualidade máxima em cada linha de código e pixel de design.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-gray-900 to-black p-6 rounded-xl border border-brand-gold/30 card-hover">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 rounded-lg gradient-gold flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-rocket text-black text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2 text-white">Inovação</h3>
+                                    <p class="text-gray-400">Sempre à frente, utilizando as tecnologias mais modernas e eficientes do mercado.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-gray-900 to-black p-6 rounded-xl border border-brand-gold/30 card-hover">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 rounded-lg gradient-red flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-handshake text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2 text-white">Parceria</h3>
+                                    <p class="text-gray-400">Trabalhamos lado a lado com nossos clientes como verdadeiros parceiros de negócio.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-gray-900 to-black p-6 rounded-xl border border-brand-gold/30 card-hover">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 rounded-lg gradient-gold flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-chart-line text-black text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2 text-white">Resultados</h3>
+                                    <p class="text-gray-400">Foco total em entregar soluções que geram impacto real e crescimento mensurável.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Forte -->
+    <section class="py-20 bg-black relative overflow-hidden">
+        <div class="absolute inset-0 tech-grid opacity-30"></div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl sm:text-4xl lg:text-6xl font-black mb-6">
+                    Pronto para <span class="gradient-text-red">Revolucionar</span> Seu Negócio?
+                </h2>
+                <p class="text-xl sm:text-2xl text-gray-300 mb-12 leading-relaxed">
+                    Não perca mais tempo com processos manuais e falta de tecnologia. <br class="hidden sm:block">
+                    <span class="text-brand-gold font-semibold">Automatize, escale e cresça</span> com as soluções da Growthfy Tech.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+                    <a href="https://wa.me/5527999301532?text=Olá! Quero revolucionar meu negócio com a Growthfy Tech" target="_blank" class="btn-gold px-12 py-6 rounded-xl text-black font-bold text-xl flex items-center space-x-3 shadow-2xl w-full sm:w-auto justify-center animate-pulse-glow">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                        <span>Falar Agora no WhatsApp</span>
+                    </a>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+                    <div class="flex items-center justify-center space-x-3 text-gray-400">
+                        <i class="fas fa-check-circle text-brand-gold text-xl"></i>
+                        <span>Sem compromisso</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-3 text-gray-400">
+                        <i class="fas fa-check-circle text-brand-gold text-xl"></i>
+                        <span>Orçamento gratuito</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-3 text-gray-400">
+                        <i class="fas fa-check-circle text-brand-gold text-xl"></i>
+                        <span>Resposta rápida</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute top-10 left-10 w-96 h-96 bg-brand-red/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl"></div>
+    </section>
+    
+    <!-- Contato -->
+    <section id="contato" class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6">
+                        Entre em <span class="gradient-text-gold">Contato</span>
+                    </h2>
+                    <p class="text-xl text-gray-400">Estamos prontos para transformar suas ideias em realidade</p>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Formulário -->
+                    <div class="bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-brand-red/30">
+                        <h3 class="text-2xl font-bold mb-6 text-white">Solicite um Orçamento</h3>
+                        <form id="contactForm" class="space-y-6">
+                            <div>
+                                <label class="block text-gray-400 mb-2 font-medium">Nome Completo</label>
+                                <input type="text" id="nome" required class="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white focus:border-brand-gold focus:outline-none transition-colors" placeholder="Seu nome">
+                            </div>
+                            <div>
+                                <label class="block text-gray-400 mb-2 font-medium">Email</label>
+                                <input type="email" id="email" required class="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white focus:border-brand-gold focus:outline-none transition-colors" placeholder="seu@email.com">
+                            </div>
+                            <div>
+                                <label class="block text-gray-400 mb-2 font-medium">Telefone / WhatsApp</label>
+                                <input type="tel" id="telefone" required class="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white focus:border-brand-gold focus:outline-none transition-colors" placeholder="(00) 00000-0000">
+                            </div>
+                            <div>
+                                <label class="block text-gray-400 mb-2 font-medium">Serviço de Interesse</label>
+                                <select id="servico" required class="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white focus:border-brand-gold focus:outline-none transition-colors">
+                                    <option value="">Selecione um serviço</option>
+                                    <option value="site">Desenvolvimento de Site</option>
+                                    <option value="crm">Desenvolvimento de CRM</option>
+                                    <option value="saas">Desenvolvimento de SaaS</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-gray-400 mb-2 font-medium">Mensagem</label>
+                                <textarea id="mensagem" rows="4" required class="w-full px-4 py-3 bg-black border border-gray-700 rounded-lg text-white focus:border-brand-gold focus:outline-none transition-colors resize-none" placeholder="Conte-nos sobre seu projeto..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-red px-8 py-4 rounded-xl text-white font-bold text-lg flex items-center justify-center space-x-3 w-full">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Enviar Solicitação</span>
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Informações de contato -->
+                    <div class="space-y-8">
+                        <!-- WhatsApp -->
+                        <div class="bg-gradient-to-br from-green-900/20 to-black p-8 rounded-2xl border border-green-600/40 card-hover">
+                            <div class="flex items-start space-x-6">
+                                <div class="w-16 h-16 rounded-xl bg-green-600 flex items-center justify-center flex-shrink-0">
+                                    <i class="fab fa-whatsapp text-white text-3xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2 text-white">WhatsApp</h3>
+                                    <p class="text-gray-400 mb-4">Atendimento rápido e direto</p>
+                                    <a href="https://wa.me/5527999301532" target="_blank" class="text-green-400 hover:text-green-300 transition-colors font-semibold text-lg">
+                                        (27) 99930-1532
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Instagram -->
+                        <div class="bg-gradient-to-br from-purple-900/20 to-black p-8 rounded-2xl border border-purple-600/40 card-hover">
+                            <div class="flex items-start space-x-6">
+                                <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center flex-shrink-0">
+                                    <i class="fab fa-instagram text-white text-3xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2 text-white">Instagram</h3>
+                                    <p class="text-gray-400 mb-4">Acompanhe nossos projetos</p>
+                                    <a href="https://www.instagram.com/growthfy_tech__sites__sistemas?igsh=cWY2bnpxdmFneno0" target="_blank" class="text-purple-400 hover:text-purple-300 transition-colors font-semibold text-lg">
+                                        @growthfy_tech__sites__sistemas
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="bg-gradient-to-br from-red-900/20 to-black p-8 rounded-2xl border border-brand-red/40 card-hover">
+                            <div class="flex items-start space-x-6">
+                                <div class="w-16 h-16 rounded-xl gradient-red flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-envelope text-white text-3xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2 text-white">Email</h3>
+                                    <p class="text-gray-400 mb-4">Para orçamentos e parcerias</p>
+                                    <a href="mailto:contato@growthfytech.com" class="text-brand-red hover:text-red-400 transition-colors font-semibold text-lg">
+                                        growthfytech@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Horário -->
+                        <div class="bg-gradient-to-br from-yellow-900/20 to-black p-8 rounded-2xl border border-brand-gold/40">
+                            <div class="flex items-start space-x-6">
+                                <div class="w-16 h-16 rounded-xl gradient-gold flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-clock text-black text-3xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2 text-white">Horário de Atendimento</h3>
+                                    <p class="text-gray-400">Segunda a Sexta: 9h às 18h</p>
+                                    <p class="text-gray-400">WhatsApp disponível 24/7</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                    <!-- Logo e descrição -->
+                    <div class="md:col-span-2">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-12 h-12 rounded-lg gradient-red flex items-center justify-center">
+                                <i class="fas fa-code text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold gradient-text-gold">Growthfy Tech</h3>
+                                <p class="text-xs text-gray-400">Soluções Digitais</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 mb-4 leading-relaxed">
+                            Desenvolvimento de Sites, CRM e SaaS que automatizam empresas e aumentam vendas.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="https://wa.me/5527999301532" target="_blank" class="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center hover:bg-green-500 transition-colors">
+                                <i class="fab fa-whatsapp text-white"></i>
+                            </a>
+                            <a href="https://www.instagram.com/growthfy_tech__sites__sistemas?igsh=cWY2bnpxdmFneno0" target="_blank" class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center hover:opacity-80 transition-opacity">
+                                <i class="fab fa-instagram text-white"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Links rápidos -->
+                    <div>
+                        <h4 class="text-white font-bold mb-4">Links Rápidos</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="text-gray-400 hover:text-brand-gold transition-colors">Home</a></li>
+                            <li><a href="#servicos" class="text-gray-400 hover:text-brand-gold transition-colors">Serviços</a></li>
+                            <li><a href="#portfolio" class="text-gray-400 hover:text-brand-gold transition-colors">Portfólio</a></li>
+                            <li><a href="#sobre" class="text-gray-400 hover:text-brand-gold transition-colors">Sobre</a></li>
+                            <li><a href="#contato" class="text-gray-400 hover:text-brand-gold transition-colors">Contato</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Serviços -->
+                    <div>
+                        <h4 class="text-white font-bold mb-4">Serviços</h4>
+                        <ul class="space-y-2">
+                            <li><a href="https://wa.me/5527999301532?text=Interesse em Sites" target="_blank" class="text-gray-400 hover:text-brand-gold transition-colors">Desenvolvimento de Sites</a></li>
+                            <li><a href="https://wa.me/5527999301532?text=Interesse em CRM" target="_blank" class="text-gray-400 hover:text-brand-gold transition-colors">Desenvolvimento de CRM</a></li>
+                            <li><a href="https://wa.me/5527999301532?text=Interesse em SaaS" target="_blank" class="text-gray-400 hover:text-brand-gold transition-colors">Desenvolvimento de SaaS</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Copyright -->
+                <div class="border-t border-gray-800 pt-8 text-center">
+                    <p class="text-gray-400">
+                        © 2026   <span class="text-brand-gold font-semibold">Growthfy Tech</span>. Todos os direitos reservados.
+                    </p>
+                    <p class="text-gray-500 text-sm mt-2">
+                        Desenvolvido com <i class="fas fa-heart text-brand-red"></i> pela Growthfy Tech
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5527999301532?text=Olá! Vim do site da Growthfy Tech" target="_blank" class="whatsapp-float">
+        <div class="w-16 h-16 rounded-full bg-green-600 flex items-center justify-center shadow-2xl hover:bg-green-500 transition-all hover:scale-110">
+            <i class="fab fa-whatsapp text-white text-3xl"></i>
+        </div>
+    </a>
+    
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        
+        // Fechar menu ao clicar em link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+        
+        // Scroll progress bar
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
+        });
+        
+        // Navbar blur on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+        
+        // Intersection Observer para animações
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+        
+        // Observar elementos com animações
+        document.querySelectorAll('.hidden-initial').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const telefone = document.getElementById('telefone').value;
+            const servico = document.getElementById('servico').value;
+            const mensagem = document.getElementById('mensagem').value;
+            
+            // Criar mensagem para WhatsApp
+            const whatsappMessage = `Olá! Vim do site da Growthfy Tech.%0A%0A*Nome:* ${nome}%0A*Email:* ${email}%0A*Telefone:* ${telefone}%0A*Serviço:* ${servico}%0A*Mensagem:* ${mensagem}`;
+            
+            // Redirecionar para WhatsApp
+            window.open(`https://wa.me/5527999301532?text=${whatsappMessage}`, '_blank');
+            
+            // Limpar formulário
+            contactForm.reset();
+            
+            // Mostrar mensagem de sucesso
+            alert('Redirecionando para o WhatsApp...');
+        });
+        
+        // Smooth scroll para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Adicionar efeito parallax suave aos elementos decorativos
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.animate-float');
+            parallaxElements.forEach((el, index) => {
+                const speed = 0.1 + (index * 0.05);
+                el.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+        
+        // Contador animado para números
+        const animateCounter = (element, target, duration = 2000) => {
+            let current = 0;
+            const increment = target / (duration / 16);
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target + (element.dataset.suffix || '');
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current) + (element.dataset.suffix || '');
+                }
+            }, 16);
+        };
+        
+        // Observar stats para animar quando visível
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.dataset.animated) {
+                    const number = parseInt(entry.target.textContent);
+                    entry.target.dataset.animated = 'true';
+                    animateCounter(entry.target, number);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        // Observar todos os números de estatísticas (exceto porcentagens)
+        setTimeout(() => {
+            document.querySelectorAll('.text-4xl.font-black').forEach(el => {
+                if (!el.textContent.includes('%') && !el.textContent.includes('/')) {
+                    const number = parseInt(el.textContent.replace('+', ''));
+                    if (!isNaN(number)) {
+                        el.dataset.suffix = el.textContent.includes('+') ? '+' : '';
+                        el.textContent = '0' + el.dataset.suffix;
+                        statsObserver.observe(el);
+                    }
+                }
+            });
+        }, 500);
+        
+        // Adicionar efeito de digitação no hero (opcional)
+        const typeEffect = (element, text, speed = 50) => {
+            let i = 0;
+            element.textContent = '';
+            const timer = setInterval(() => {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(timer);
+                }
+            }, speed);
+        };
+        
+        // Prevenção de clicar múltiplas vezes nos botões
+        document.querySelectorAll('button, a.btn-red, a.btn-gold').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (this.classList.contains('loading')) {
+                    return false;
+                }
+                this.classList.add('loading');
+                setTimeout(() => {
+                    this.classList.remove('loading');
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
