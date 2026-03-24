@@ -1,0 +1,8 @@
+Paleta de cores 
+#0de2ff      verde das sombras 
+
+#000000      preto
+
+#5b5b5b      cinza escuro
+
+#727272      cinza claro

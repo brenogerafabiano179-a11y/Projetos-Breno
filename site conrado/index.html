@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- ============================================================
+       Ótima - Agência de Tráfego Pago
+       index.html — Estrutura principal do site
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ótima — Agência de tráfego pago que transforma cliques em clientes reais. Campanhas estratégicas no Google e Meta Ads." />
+  <meta name="keywords" content="tráfego pago, agência digital, Google Ads, Meta Ads, performance, marketing digital" />
+  <title>Ótima | Agência de Tráfego Pago</title>
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome (ícones) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Folha de estilos principal -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER — Fixo no topo com logo e CTA
+       ============================================================ -->
+ <header class="header" id="header">
+  <div class="header__container">
+
+    <!-- Logo lado esquerdo -->
+    <div class="header__logo">
+      <a href="#hero" class="logo-link">
+        <img src="imglogo.png" alt="Logo Ótima" class="logo-img">
+      </a>
+    </div>
+
+      <!-- Meio livre (nav oculta em mobile) -->
+      <nav class="header__nav" id="mainNav">
+        <ul class="nav__list">
+          <li><a href="#problema" class="nav__link">Sobre</a></li>
+          <li><a href="#beneficios" class="nav__link">Serviços</a></li>
+          <li><a href="#metodo" class="nav__link">Método</a></li>
+          <li><a href="#diferencial" class="nav__link">Diferenciais</a></li>
+        </ul>
+      </nav>
+
+      <!-- CTA lado direito -->
+      <div class="header__cta">
+        <a
+          href="https://wa.me/5527997400540"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn--cta-header"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+          Falar com especialista
+        </a>
+      </div>
+
+      <!-- Botão hamburguer mobile -->
+      <button class="header__hamburger" id="hamburger" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+  <!-- /HEADER -->
+
+
+  <!-- ============================================================
+       HERO SECTION — Seção principal com headline e CTA
+       ============================================================ -->
+  <section class="hero" id="hero">
+    <!-- Imagem de fundo com degradê -->
+    <div class="hero__bg">
+      <img src="imgfundo.png" alt="Ótima Agência - Tráfego Pago" class="hero__bg-img" />
+      <div class="hero__overlay"></div>
+    </div>
+
+    <div class="hero__container container">
+      <div class="hero__content" data-animate="fade-up">
+
+        <!-- Badge -->
+        <span class="hero__badge">
+          <i class="fa-solid fa-bolt"></i> Agência de Tráfego Pago
+        </span>
+
+        <!-- Headline principal -->
+        <h1 class="hero__headline">
+          Pare de depender<br />
+          de <span class="text-accent">indicação</span>.<br />
+          Transforme tráfego pago<br />
+          em uma máquina <span class="text-accent">previsível</span><br />
+          de clientes.
+        </h1>
+
+        <!-- Subtexto -->
+        <p class="hero__sub">
+          Criamos campanhas estratégicas que colocam sua empresa na frente de
+          pessoas prontas para comprar — todos os dias.
+        </p>
+
+        <!-- Botão CTA principal -->
+        <a
+          href="https://wa.me/5527997400540"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn--primary btn--lg"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+          Quero mais clientes no WhatsApp
+        </a>
+
+       
+
+    <!-- Scroll indicator -->
+    <div class="hero__scroll">
+      <span></span>
+    </div>
+  </section>
+  <!-- /HERO -->
+
+
+  <!-- ============================================================
+       SEÇÃO PROBLEMA — Duas colunas: texto + imagem
+       ============================================================ -->
+  <section class="problema" id="problema">
+    <div class="container">
+      <div class="problema__grid">
+
+        <!-- Coluna esquerda: texto -->
+        <div class="problema__text" data-animate="fade-right">
+          <span class="section-label">O Problema</span>
+          <h2 class="section-title">
+            Depender só de indicação é
+            <span class="text-accent">arriscado demais</span>
+          </h2>
+          <p class="problema__desc">
+            Você já parou para pensar o que acontece quando as indicações secam?
+            Sem um fluxo constante e previsível de novos clientes, seu negócio
+            fica à mercê da sorte — e isso é um risco que nenhuma empresa
+            profissional pode se dar ao luxo de correr.
+          </p>
+          <ul class="problema__list">
+            <li>
+              <i class="fa-solid fa-circle-xmark icon-danger"></i>
+              Faturamento irregular e imprevisível mês a mês
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-xmark icon-danger"></i>
+              Dependência total de clientes que indicam outros
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-xmark icon-danger"></i>
+              Sem controle sobre o crescimento da empresa
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-xmark icon-danger"></i>
+              Concorrentes na frente enquanto você espera
+            </li>
+          </ul>
+
+          <!-- CTA inline -->
+          <a
+            href="https://wa.me/5527997400540"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn--primary"
+          >
+            Quero aparecer também
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Coluna direita: imagem -->
+        <div class="problema__image" data-animate="fade-left">
+          <div class="image-frame">
+            <img src="img8.png  " alt="Agência Ótima - Resultado em tráfego pago" />
+            <div class="image-frame__glow"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- /PROBLEMA -->
+
+
+  <!-- ============================================================
+       SEÇÃO BENEFÍCIOS — 3 cards com imagem
+       ============================================================ -->
+  <section class="beneficios" id="beneficios">
+    <div class="container">
+
+      <!-- Cabeçalho da seção -->
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-label">Benefícios</span>
+        <h2 class="section-title">
+          O que você ganha com a <span class="text-accent">Ótima</span>
+        </h2>
+        <p class="section-subtitle">
+          Cada estratégia é desenvolvida com foco em resultado real, não em métricas de vaidade.
+        </p>
+      </div>
+
+      <!-- Grid de cards -->
+      <div class="beneficios__grid">
+
+        <!-- Card 1 -->
+        <div class="card" data-animate="fade-up" data-delay="0">
+          <div class="card__image">
+            <img src="img2.jpg" alt="Público certo - Ótima Agência" />
+            <div class="card__image-overlay"></div>
+          </div>
+          <div class="card__body">
+            <div class="card__icon">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <h3 class="card__title">Público certo</h3>
+            <p class="card__text">
+              Seus anúncios aparecem para pessoas realmente interessadas — no
+              momento exato em que elas estão prontas para comprar.
+            </p>
+          </div>
+          <div class="card__glow"></div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card" data-animate="fade-up" data-delay="150">
+          <div class="card__image">
+            <img src="img4.jpg" alt="Decisões baseadas em dados - Ótima Agência" />
+            <div class="card__image-overlay"></div>
+          </div>
+          <div class="card__body">
+            <div class="card__icon">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3 class="card__title">Decisões baseadas em dados</h3>
+            <p class="card__text">
+              Cada campanha é otimizada usando métricas reais. Nada de achismo
+              — tudo analisado e ajustado com base em performance.
+            </p>
+          </div>
+          <div class="card__glow"></div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card" data-animate="fade-up" data-delay="300">
+          <div class="card__image">
+            <img src="img1.jpg" alt="Crescimento escalável - Ótima Agência" />
+            <div class="card__image-overlay"></div>
+          </div>
+          <div class="card__body">
+            <div class="card__icon">
+              <i class="fa-solid fa-rocket"></i>
+            </div>
+            <h3 class="card__title">Crescimento escalável</h3>
+            <p class="card__text">
+              Quando encontramos o que funciona, escalamos os resultados com
+              segurança — crescimento previsível e sustentável.
+            </p>
+          </div>
+          <div class="card__glow"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- /BENEFÍCIOS -->
+
+
+  <!-- ============================================================
+       FRASE DE IMPACTO — Texto central destacado
+       ============================================================ -->
+  <section class="impacto">
+    <div class="impacto__bg"></div>
+    <div class="container">
+      <div class="impacto__content" data-animate="fade-up">
+
+        <div class="impacto__quote">
+          <i class="fa-solid fa-quote-left impacto__quote-icon"></i>
+          <h2 class="impacto__text">
+            A internet é a <span class="text-accent">maior avenida</span> do mundo. 
+          </h2>
+          <p class="impacto__desc">
+            Milhares de pessoas passam por ela todos os dias procurando soluções.
+          </p>
+          <p class="impacto__desc impacto__desc--accent">
+            O tráfego pago coloca sua empresa no maior
+            <strong>outdoor</strong> dessa avenida.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- /IMPACTO -->
+
+
+  <!-- ============================================================
+       MÉTODO — 4 etapas numeradas
+       ============================================================ -->
+  <section class="metodo" id="metodo">
+    <div class="container">
+
+      <!-- Cabeçalho -->
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-label">Nosso Processo</span>
+        <h2 class="section-title">
+          O método <span class="text-accent">Ótima</span>
+        </h2>
+        <p class="section-subtitle">
+          Um processo estruturado em 4 etapas que garante resultados consistentes.
+        </p>
+      </div>
+
+      <!-- Grid de steps -->
+      <div class="metodo__grid">
+
+        <!-- Step 01 -->
+        <div class="step" data-animate="fade-up" data-delay="0">
+          <div class="step__number">01</div>
+          <div class="step__connector"></div>
+          <div class="step__body">
+            <div class="step__icon">
+              <i class="fa-solid fa-magnifying-glass-chart"></i>
+            </div>
+            <h3 class="step__title">Diagnóstico estratégico</h3>
+            <p class="step__text">
+              Analisamos seu negócio, mercado e concorrência para identificar
+              as melhores oportunidades de crescimento com tráfego pago.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 02 -->
+        <div class="step" data-animate="fade-up" data-delay="150">
+          <div class="step__number">02</div>
+          <div class="step__connector"></div>
+          <div class="step__body">
+            <div class="step__icon">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <h3 class="step__title">Estruturação das campanhas</h3>
+            <p class="step__text">
+              Criamos e configuramos as campanhas com segmentações precisas,
+              criativos persuasivos e landing pages otimizadas para conversão.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 03 -->
+        <div class="step" data-animate="fade-up" data-delay="300">
+          <div class="step__number">03</div>
+          <div class="step__connector"></div>
+          <div class="step__body">
+            <div class="step__icon">
+              <i class="fa-solid fa-gears"></i>
+            </div>
+            <h3 class="step__title">Otimizações constantes</h3>
+            <p class="step__text">
+              Monitoramos os resultados diariamente e ajustamos o que for
+              necessário para maximizar seu retorno sobre investimento.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 04 -->
+        <div class="step" data-animate="fade-up" data-delay="450">
+          <div class="step__number">04</div>
+          <div class="step__body">
+            <div class="step__icon">
+              <i class="fa-solid fa-chart-simple"></i>
+            </div>
+            <h3 class="step__title">Escala segura</h3>
+            <p class="step__text">
+              Com os resultados comprovados, aumentamos os investimentos de
+              forma estratégica para escalar o crescimento com segurança.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- /MÉTODO -->
+
+
+  <!-- ============================================================
+       DIFERENCIAL + CONFIANÇA — Mesma seção com fundo único
+       ============================================================ -->
+  <section class="diferencial-confianca" id="diferencial">
+
+    <!-- Fundo compartilhado -->
+    <div class="dc__bg-wrap">
+      <div class="dc__bg-overlay"></div>
+    </div>
+
+    <div class="container">
+
+      <!-- Subseção: Diferencial -->
+      <div class="diferencial" data-animate="fade-up">
+        <div class="diferencial__grid">
+
+          <!-- Texto esquerda -->
+          <div class="diferencial__text">
+            <span class="section-label">Por que a Ótima?</span>
+            <h2 class="section-title">
+              Trabalhamos diferente.<br />
+              <span class="text-accent">Entregamos diferente.</span>
+            </h2>
+            <ul class="diferencial__checklist">
+              <li>
+                <span class="check-icon">✔</span>
+                Estratégias personalizadas para cada negócio
+              </li>
+              <li>
+                <span class="check-icon">✔</span>
+                Foco total em resultados reais e mensuráveis
+              </li>
+              <li>
+                <span class="check-icon">✔</span>
+                Transparência absoluta nos dados e relatórios
+              </li>
+              <li>
+                <span class="check-icon">✔</span>
+                Otimização constante de campanhas e criativos
+              </li>
+              <li>
+                <span class="check-icon">✔</span>
+                Equipe especializada e dedicada ao seu negócio
+              </li>
+              <li>
+                <span class="check-icon">✔</span>
+                Comunicação direta e ágil sem burocracia
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cards de número direita -->
+          <div class="diferencial__cards">
+            <div class="diff-card" data-animate="fade-left" data-delay="0">
+              <strong>+200</strong>
+              <span>Clientes satisfeitos</span>
+            </div>
+            <div class="diff-card" data-animate="fade-left" data-delay="100">
+              <strong>R$10M+</strong>
+              <span>Em tráfego gerenciado</span>
+            </div>
+            <div class="diff-card" data-animate="fade-left" data-delay="200">
+              <strong>5★</strong>
+              <span>Avaliação média</span>
+            </div>
+            <div class="diff-card" data-animate="fade-left" data-delay="300">
+              <strong>24/7</strong>
+              <span>Monitoramento ativo</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Divisor visual -->
+      <div class="dc__divider"></div>
+
+      <!-- Subseção: Confiança -->
+      <div class="confianca" data-animate="fade-up">
+        <div class="section-header">
+          <span class="section-label">Transparência Total</span>
+          <h2 class="section-title">
+            Você sempre sabe onde <span class="text-accent">cada centavo</span> foi investido
+          </h2>
+        </div>
+
+        <div class="confianca__grid">
+
+          <div class="trust-item" data-animate="fade-up" data-delay="0">
+            <div class="trust-item__icon">
+<i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h4>Relatórios detalhados</h4>
+            <p>Receba relatórios periódicos com todos os dados das suas campanhas — sem enrolação.</p>
+          </div>
+
+          <div class="trust-item" data-animate="fade-up" data-delay="150">
+            <div class="trust-item__icon">
+              <i class="fa-solid fa-eye"></i>
+            </div>
+            <h4>Acesso total às contas</h4>
+            <p>Você tem acesso completo às plataformas. Seu dinheiro, seus dados — sempre.</p>
+          </div>
+
+          <div class="trust-item" data-animate="fade-up" data-delay="300">
+            <div class="trust-item__icon">
+              <i class="fa-solid fa-comments"></i>
+            </div>
+            <h4>Comunicação direta</h4>
+            <p>Fale diretamente com os especialistas responsáveis pelas suas campanhas.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- /DIFERENCIAL + CONFIANÇA -->
+
+
+  <!-- ============================================================
+       CTA FINAL — Chamada para ação principal
+       ============================================================ -->
+  <section class="cta-final">
+    <div class="cta-final__bg"></div>
+    <div class="container">
+      <div class="cta-final__content" data-animate="fade-up">
+
+        <span class="section-label">Dê o próximo passo</span>
+
+        <h2 class="cta-final__title">
+          Pronto para atrair mais clientes<br />
+          <span class="text-accent">todos os dias?</span>
+        </h2>
+
+        <p class="cta-final__sub">
+          Converse com um dos nossos especialistas e descubra como
+          transformar seu tráfego pago em uma fonte previsível de clientes.
+        </p>
+
+        <a
+          href="https://wa.me/5527997400540"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn--primary btn--lg btn--glow"
+        >
+          🚀 Quero aumentar minhas vendas
+        </a>
+
+        <p class="cta-final__disclaimer">
+          <i class="fa-solid fa-lock"></i>
+          Conversa sem compromisso. Resposta em até 5 minutos.
+        </p>
+
+      </div>
+    </div>
+  </section>
+  <!-- /CTA FINAL -->
+
+
+  <!-- ============================================================
+     FOOTER — Rodapé institucional
+============================================================ -->
+<footer class="footer" id="footer">
+  <div class="footer__top">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Logo + Texto institucional -->
+        <div class="footer__brand">
+
+          <!-- Logo em imagem -->
+          <a href="#hero" class="footer__logo">
+            <img src="imglogo.png" alt="Ótima Agência" class="footer__logo-img">
+          </a>
+
+          <p class="footer__tagline">
+            Transformando tráfego em resultado real para empresas que querem crescer com previsibilidade.
+          </p>
+
+          <!-- Botões sociais -->
+          <div class="footer__social">
+
+            <a
+              href="https://wa.me/5527997400540"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-btn social-btn--whatsapp"
+              aria-label="WhatsApp"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>WhatsApp</span>
+            </a>
+
+            <a
+              href="https://www.instagram.com/otimadigital.agencia"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-btn social-btn--instagram"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+              <span>Instagram</span>
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- Links rápidos -->
+        <div class="footer__links">
+          <h4 class="footer__links-title">Navegação</h4>
+          <ul>
+            <li><a href="#problema">Sobre</a></li>
+            <li><a href="#beneficios">Serviços</a></li>
+            <li><a href="#metodo">Método</a></li>
+            <li><a href="#diferencial">Diferenciais</a></li>
+          </ul>
+        </div>
+
+        <!-- Contato -->
+        <div class="footer__contact">
+          <h4 class="footer__links-title">Contato</h4>
+          <ul>
+            <li>
+              <i class="fa-brands fa-whatsapp"></i>
+              <a href="https://wa.me/5527997400540" target="_blank">(27) 99740-0540</a>
+            </li>
+            <li>
+              <i class="fa-brands fa-instagram"></i>
+              <a href="https://www.instagram.com/otimadigital.agencia" target="_blank">@otimadigital.agencia</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer__bottom">
+    <div class="container">
+      <p>&copy; <span id="currentYear"></span> Ótima Agência de Tráfego Pago. Todos os direitos reservados.</p>
+      <p>Desenvolvido com <i class="fa-solid fa-heart" style="color:#0de2ff;"></i> pela equipe Ótima</p>
+    </div>
+  </div>
+</footer>
+  <!-- ============================================================
+       BOTÃO FLUTUANTE DE WHATSAPP
+       ============================================================ -->
+  <a
+    href="https://wa.me/5527997400540"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-float"
+    aria-label="Chamar no WhatsApp"
+  >
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="whatsapp-float__tooltip">Fale conosco!</span>
+  </a>
+
+
+  <!-- Script principal -->
+  <script src="script.js"></script>
+</body>
+</html>
